@@ -1,5 +1,9 @@
 # FlyerCheck
 
+> **Presentation (German):** [https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/](https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/) · source: [site/index.html](site/index.html)
+> **Live demo reports:** [with master data](https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/demo/report.html) · [without master data](https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/demo/report-ohne-stammdaten.html)
+> **Architecture docs:** [docs/README.md](docs/README.md)
+
 AI-assisted consistency validation for retail promotional flyers (Angebotsflyer). FlyerCheck takes a flyer PDF,
 extracts every offer with its position on the page, runs deterministic rules (unit price, discount, deposit,
 mandatory Grundpreis, validity dates, page references, master data) plus targeted multimodal-LLM checks

@@ -2,6 +2,8 @@
 
 ← [plan](implementation-plan.md) · [docs index](../README.md)
 
+**Final deck (German, reveal.js):** [https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/](https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/) · source: [../../site/index.html](../../site/index.html) · deployed by `.github/workflows/pages.yml`
+
 Structured around the three questions in the brief.
 
 | Min | Slide | Message | Source |

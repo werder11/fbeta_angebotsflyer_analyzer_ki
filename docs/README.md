@@ -6,6 +6,7 @@ The system ingests a flyer PDF, extracts offers with their location on the page,
 > **Current phase:** PoC — 30-min implementation sprint + 10-min presentation.
 > **Implementation plan (detailed, executable):** [../.docs/adhoc/flyercheck-poc/flyercheck-poc-plan.md](../.docs/adhoc/flyercheck-poc/flyercheck-poc-plan.md) · tasks: [checklist](../.docs/adhoc/flyercheck-poc/flyercheck-poc-tasks.md)
 > **Agent rules:** [../CLAUDE.md](../CLAUDE.md)
+> **Presentation (German, GitHub Pages):** [https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/](https://werder11.github.io/fbeta_angebotsflyer_analyzer_ki/) · source: [../site/index.html](../site/index.html) · speaker outline: [plan/presentation.md](plan/presentation.md)
 
 ## How to navigate (humans and coding agents)
 
