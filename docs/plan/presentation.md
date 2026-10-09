@@ -22,7 +22,7 @@ Structured around the three questions in the brief.
 
 ```
 $ flyercheck run data/samples/Designer.pdf --mode replay
-✔ 9 offers · 7 fail · 2 needs_review · 1 not_evaluable · 26 pass   (replay, 0.6s)
+✔ 9 offers · 7 fail · 2 needs_review · 10 not_evaluable · 35 pass   (replay, 0.6s)
 
 $ flyercheck eval out/<run>/findings.json data/golden/designer.json
 category                 TP   FP   FN precision  recall
@@ -41,7 +41,9 @@ status_agreement 1.00 · expected_pass_agreement 1.00
 | V-01 (9 crops, 3 parallel) | ~35 s; fallback to `gemini-3.1-flash-lite` on 429 shows the fallback chain working |
 | Tokens (10 calls) | 29.7k in · 5.1k out · 4.7k thinking → fractions of a cent per page |
 | Replay | 0.6 s, offline, deterministic |
-| Tests | 116 passing, offline |
+| Tests | 190+ passing, offline (MVP: 116) |
+| With reference CSV | 8 fail · 2 needs_review · 9 not_evaluable · 43 pass; R-08 pizza 1.69 vs approved 1.79 |
+| Mutation eval | 41 seeded defects, recall 95.1 %, 0 collateral FP; 2 misses = R-01 ±0.01 tolerance on large packs |
 
 **Caveat to state:** one synthetic flyer = a functional test, not an accuracy claim (see risks R10). Next: mutation-based golden set (E2).
 

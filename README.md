@@ -39,7 +39,7 @@ uv sync
 
 # Validate the sample flyer offline, using recorded LLM responses
 uv run flyercheck run data/samples/Designer.pdf --mode replay --out out
-# ✔ 9 offers · 7 fail · 2 needs_review · 1 not_evaluable · 26 pass   (replay, 0.6s)
+# ✔ 9 offers · 7 fail · 2 needs_review · 10 not_evaluable · 35 pass   (replay, 0.6s)
 # → out/<run>/findings.json
 # → out/<run>/report.html
 
