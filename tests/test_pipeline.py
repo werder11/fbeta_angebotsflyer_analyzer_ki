@@ -19,7 +19,7 @@ def _finding(check_id: str, status: Status) -> Finding:
 
 def test_pipeline_from_context_wires_stages(monkeypatch, tmp_path):
     calls = {}
-    monkeypatch.setattr(pipeline, "make_llm", lambda mode, rec: _LLM())
+    monkeypatch.setattr(pipeline, "make_llm", lambda mode, rec, provider: _LLM())
     monkeypatch.setattr(pipeline.rules, "run_rules", lambda ctx: [_finding("R-01", Status.FAIL)])
     monkeypatch.setattr(pipeline.vision_checks, "run_vision_checks",
                         lambda ctx, llm: [_finding("V-01", Status.PASS)])

@@ -8,7 +8,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "1.0"
+CONTRACT_VERSION = "1.1"
 
 
 class Status(StrEnum):
@@ -214,3 +214,20 @@ class GoldenSet(Model):
     document: str
     labels: list[GoldenLabel]
     expected_passes: list[GoldenLabel] = []
+
+
+class Decision(StrEnum):
+    CONFIRM = "confirm"
+    REJECT = "reject"
+    ESCALATE = "escalate"
+
+
+class ReviewDecision(Model):
+    """Human disposition of a finding (ADR-0006). Kept separate from model-generated conclusions."""
+
+    run_id: str
+    finding_id: str
+    decision: Decision
+    reviewer: str = "anonymous"
+    reason: str = ""
+    decided_at: datetime

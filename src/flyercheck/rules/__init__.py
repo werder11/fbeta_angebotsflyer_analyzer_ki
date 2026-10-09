@@ -1,17 +1,15 @@
-"""Deterministic rules R-01..R-08. Owned by track T3. No LLM calls (ADR-0001)."""
+"""Deterministic rules (auto-discovered r_*.py modules). No LLM calls (ADR-0001)."""
+import importlib
+import pkgutil
+
+import flyercheck.rules as _pkg
 from flyercheck.domain.models import Category, DocumentContext, Finding, Severity, Status
-from flyercheck.rules import (  # noqa: F401  (importing registers the rules)
-    r_01_unit_price,
-    r_02_discount,
-    r_02b_discount_rounding,
-    r_03_deposit,
-    r_04_grundpreis_present,
-    r_05_validity_weekday,
-    r_06_required_fields,
-    r_07_page_refs,
-    r_08_master_data,
-)
 from flyercheck.rules.base import REGISTRY
+
+# Auto-discover rule modules (r_*.py); importing registers them. New rules need no edit here.
+for _m in sorted(pkgutil.iter_modules(_pkg.__path__), key=lambda m: m.name):
+    if _m.name.startswith("r_") and _m.name != "r_common":
+        importlib.import_module(f"{_pkg.__name__}.{_m.name}")
 
 RULES_VERSION = "rules@1.0"
 

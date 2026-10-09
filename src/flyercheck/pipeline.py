@@ -20,10 +20,11 @@ def run(
     year: int | None = None,
     from_context: str | None = None,
     recordings_dir: str = "data/recordings",
+    provider: str = "gemini",
 ) -> RunResult:
     t0 = time.perf_counter()
     started = datetime.now(UTC)
-    llm = make_llm(mode, recordings_dir)
+    llm = make_llm(mode, recordings_dir, provider)
 
     if from_context:  # fallback path: skip ingest/extract, use a normalized context
         ctx = DocumentContext.model_validate_json(Path(from_context).read_text())
@@ -62,6 +63,7 @@ def run(
             ),
             "extract_prompt": extract.PROMPT_VERSION,
             "rules": RULES_VERSION,
+            "provider": provider,
         },
         llm_usage=dict(getattr(llm, "usage", {}) or {}),
     )
