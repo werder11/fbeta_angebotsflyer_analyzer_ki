@@ -1,0 +1,267 @@
+{
+ "validity_raw": "Gültig von Mo. 07.10. bis Sa. 12.10.",
+ "page_references": [],
+ "offers": [
+  {
+   "product_name": "Sonnenäpfel",
+   "description_lines": [
+    "Sorte: Rubinette",
+    "Klasse I"
+   ],
+   "price_raw": "1,69",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "1 kg",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "image_description": "Red and yellow apples, one sliced in half",
+   "offer_box_2d": [
+    187,
+    11,
+    371,
+    331
+   ],
+   "image_box_2d": [
+    187,
+    11,
+    315,
+    331
+   ]
+  },
+  {
+   "product_name": "Rispentomaten",
+   "description_lines": [
+    "aus den Niederlanden",
+    "Klasse I"
+   ],
+   "price_raw": "1,49",
+   "original_price_raw": "1,99",
+   "discount_raw": "-25%",
+   "quantity_raw": "1 kg",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "image_description": "A vine of red tomatoes",
+   "offer_box_2d": [
+    187,
+    341,
+    371,
+    659
+   ],
+   "image_box_2d": [
+    187,
+    353,
+    299,
+    635
+   ]
+  },
+  {
+   "product_name": "Nordmeer Lachsfilet",
+   "description_lines": [
+    "Frisch, mit Haut",
+    "Aus nachhaltiger Aquakultur"
+   ],
+   "price_raw": "2,99",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "100 g",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "image_description": "A piece of raw salmon fillet with a lemon slice",
+   "offer_box_2d": [
+    181,
+    670,
+    375,
+    994
+   ],
+   "image_box_2d": [
+    181,
+    670,
+    318,
+    994
+   ]
+  },
+  {
+   "product_name": "Bergtal Fruchtjoghurt",
+   "description_lines": [
+    "Versch. Sorten"
+   ],
+   "price_raw": "0,39",
+   "original_price_raw": "0,59",
+   "discount_raw": "-33%",
+   "quantity_raw": "150 g Becher",
+   "unit_price_raw": "1 kg = 2,60",
+   "deposit_raw": null,
+   "image_description": "Two cups of Bergtal Joghurt, strawberry and vanilla flavors",
+   "offer_box_2d": [
+    381,
+    18,
+    576,
+    361
+   ],
+   "image_box_2d": [
+    381,
+    28,
+    501,
+    361
+   ]
+  },
+  {
+   "product_name": "Goldkrone Röstkaffee",
+   "description_lines": [
+    "100 % Arabica"
+   ],
+   "price_raw": "6,99",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "500 g Packung",
+   "unit_price_raw": "1 kg = 13,98",
+   "deposit_raw": null,
+   "image_description": "A black and gold package of Goldkrone Röstkaffee Klassik with coffee beans",
+   "offer_box_2d": [
+    378,
+    374,
+    576,
+    653
+   ],
+   "image_box_2d": [
+    378,
+    441,
+    529,
+    631
+   ]
+  },
+  {
+   "product_name": "Steinofen Genuss Pizza Salami",
+   "description_lines": [
+    "Tiefgefroren"
+   ],
+   "price_raw": "1,69",
+   "original_price_raw": "2,89",
+   "discount_raw": "-42%",
+   "quantity_raw": "320 g Packung",
+   "unit_price_raw": "1 kg = 5,59",
+   "deposit_raw": null,
+   "image_description": "A box of Steinofen Genuss Pizza Salami",
+   "offer_box_2d": [
+    381,
+    677,
+    576,
+    986
+   ],
+   "image_box_2d": [
+    381,
+    701,
+    518,
+    967
+   ]
+  },
+  {
+   "product_name": "Quellklar Mineralwasser",
+   "description_lines": [
+    "Classic"
+   ],
+   "price_raw": "3,99",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "6 x 1,5 l PET-Flaschen",
+   "unit_price_raw": "1 l = 0,44",
+   "deposit_raw": "zzgl. 1,50 Pfand",
+   "image_description": "A crate of Quellklar mineral water bottles and one single bottle next to it",
+   "offer_box_2d": [
+    578,
+    18,
+    766,
+    331
+   ],
+   "image_box_2d": [
+    578,
+    28,
+    720,
+    331
+   ]
+  },
+  {
+   "product_name": "Schola Schokolade",
+   "description_lines": [
+    "Alpenvollmilch"
+   ],
+   "price_raw": "0,99",
+   "original_price_raw": "1,29",
+   "discount_raw": "-23%",
+   "quantity_raw": "100 g Tafel",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "image_description": "An eggplant with a purple banner that says Schola",
+   "offer_box_2d": [
+    584,
+    353,
+    763,
+    653
+   ],
+   "image_box_2d": [
+    584,
+    353,
+    712,
+    653
+   ]
+  },
+  {
+   "product_name": "Softina Toilettenpapier Samtweich",
+   "description_lines": [],
+   "price_raw": "2,79",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "8 x 150 Blatt Packung",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "image_description": "A pack of Softina Samtweich toilet paper, 3 layers",
+   "offer_box_2d": [
+    584,
+    670,
+    766,
+    989
+   ],
+   "image_box_2d": [
+    584,
+    680,
+    705,
+    989
+   ]
+  }
+ ],
+ "text_blocks": [
+  {
+   "text": "Rezeptidee: Cremige Kürbissuppe mit gerösteten Kernen. Rezept auf Seite 6.",
+   "box_2d": [
+    770,
+    535,
+    905,
+    690
+   ]
+  },
+  {
+   "text": "Noch mehr Inspiration? Rezepte, Tipps und aktuelle Angebote auf frischfeld-markt.de",
+   "box_2d": [
+    770,
+    700,
+    905,
+    975
+   ]
+  },
+  {
+   "text": "Regional. Vielfältig. Einfach gut.",
+   "box_2d": [
+    770,
+    20,
+    905,
+    290
+   ]
+  }
+ ],
+ "validity_box_2d": [
+  152,
+  0,
+  178,
+  560
+ ]
+}

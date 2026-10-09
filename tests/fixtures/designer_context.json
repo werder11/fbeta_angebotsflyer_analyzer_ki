@@ -1,0 +1,459 @@
+{
+ "document": {
+  "id": "25c03aae8982",
+  "sha256": "25c03aae8982316db0a31e51d7d0a2a66c4934b2b8d8d7378728e95ca92b3a9b",
+  "filename": "Designer.pdf",
+  "page_count": 1,
+  "campaign_year": 2026,
+  "campaign_year_source": "pdf_metadata"
+ },
+ "pages": [
+  {
+   "number": 1,
+   "width_px": 1024,
+   "height_px": 1536,
+   "path": "tests/fixtures/page1.png"
+  }
+ ],
+ "offers": [
+  {
+   "id": "o-1",
+   "page": 1,
+   "bbox": {
+    "x0": 0.011,
+    "y0": 0.187,
+    "x1": 0.331,
+    "y1": 0.371
+   },
+   "image_bbox": {
+    "x0": 0.011,
+    "y0": 0.187,
+    "x1": 0.331,
+    "y1": 0.315
+   },
+   "product_name": "Sonnenäpfel",
+   "brand": null,
+   "description_lines": [
+    "Sorte: Rubinette",
+    "Klasse I"
+   ],
+   "badges": [
+    "AUS DER REGION"
+   ],
+   "image_description": "Red and yellow apples, one sliced in half",
+   "price_raw": "1,69",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "1 kg",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "price": "1.69",
+   "original_price": null,
+   "discount_pct": null,
+   "quantity": {
+    "amount": "1",
+    "unit": "kg",
+    "pack_count": 1
+   },
+   "unit_price": null,
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-2",
+   "page": 1,
+   "bbox": {
+    "x0": 0.341,
+    "y0": 0.187,
+    "x1": 0.659,
+    "y1": 0.371
+   },
+   "image_bbox": {
+    "x0": 0.353,
+    "y0": 0.187,
+    "x1": 0.635,
+    "y1": 0.299
+   },
+   "product_name": "Rispentomaten",
+   "brand": null,
+   "description_lines": [
+    "aus den Niederlanden",
+    "Klasse I"
+   ],
+   "badges": [],
+   "image_description": "A vine of red tomatoes",
+   "price_raw": "1,49",
+   "original_price_raw": "1,99",
+   "discount_raw": "-25%",
+   "quantity_raw": "1 kg",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "price": "1.49",
+   "original_price": "1.99",
+   "discount_pct": "25",
+   "quantity": {
+    "amount": "1",
+    "unit": "kg",
+    "pack_count": 1
+   },
+   "unit_price": null,
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-3",
+   "page": 1,
+   "bbox": {
+    "x0": 0.67,
+    "y0": 0.181,
+    "x1": 0.994,
+    "y1": 0.375
+   },
+   "image_bbox": {
+    "x0": 0.67,
+    "y0": 0.181,
+    "x1": 0.994,
+    "y1": 0.318
+   },
+   "product_name": "Nordmeer Lachsfilet",
+   "brand": null,
+   "description_lines": [
+    "Frisch, mit Haut",
+    "Aus nachhaltiger Aquakultur"
+   ],
+   "badges": [],
+   "image_description": "A piece of raw salmon fillet with a lemon slice",
+   "price_raw": "2,99",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "100 g",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "price": "2.99",
+   "original_price": null,
+   "discount_pct": null,
+   "quantity": {
+    "amount": "100",
+    "unit": "g",
+    "pack_count": 1
+   },
+   "unit_price": null,
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-4",
+   "page": 1,
+   "bbox": {
+    "x0": 0.018,
+    "y0": 0.381,
+    "x1": 0.361,
+    "y1": 0.576
+   },
+   "image_bbox": {
+    "x0": 0.028,
+    "y0": 0.381,
+    "x1": 0.361,
+    "y1": 0.501
+   },
+   "product_name": "Bergtal Fruchtjoghurt",
+   "brand": null,
+   "description_lines": [
+    "Versch. Sorten"
+   ],
+   "badges": [],
+   "image_description": "Two cups of Bergtal Joghurt, strawberry and vanilla flavors",
+   "price_raw": "0,39",
+   "original_price_raw": "0,59",
+   "discount_raw": "-33%",
+   "quantity_raw": "150 g Becher",
+   "unit_price_raw": "1 kg = 2,60",
+   "deposit_raw": null,
+   "price": "0.39",
+   "original_price": "0.59",
+   "discount_pct": "33",
+   "quantity": {
+    "amount": "150",
+    "unit": "g",
+    "pack_count": 1
+   },
+   "unit_price": {
+    "value": "2.60",
+    "per_amount": "1",
+    "per_unit": "kg"
+   },
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-5",
+   "page": 1,
+   "bbox": {
+    "x0": 0.374,
+    "y0": 0.378,
+    "x1": 0.653,
+    "y1": 0.576
+   },
+   "image_bbox": {
+    "x0": 0.441,
+    "y0": 0.378,
+    "x1": 0.631,
+    "y1": 0.529
+   },
+   "product_name": "Goldkrone Röstkaffee",
+   "brand": null,
+   "description_lines": [
+    "100 % Arabica"
+   ],
+   "badges": [],
+   "image_description": "A black and gold package of Goldkrone Röstkaffee Klassik with coffee beans",
+   "price_raw": "6,99",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "500 g Packung",
+   "unit_price_raw": "1 kg = 13,98",
+   "deposit_raw": null,
+   "price": "6.99",
+   "original_price": null,
+   "discount_pct": null,
+   "quantity": {
+    "amount": "500",
+    "unit": "g",
+    "pack_count": 1
+   },
+   "unit_price": {
+    "value": "13.98",
+    "per_amount": "1",
+    "per_unit": "kg"
+   },
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-6",
+   "page": 1,
+   "bbox": {
+    "x0": 0.677,
+    "y0": 0.381,
+    "x1": 0.986,
+    "y1": 0.576
+   },
+   "image_bbox": {
+    "x0": 0.701,
+    "y0": 0.381,
+    "x1": 0.967,
+    "y1": 0.518
+   },
+   "product_name": "Steinofen Genuss Pizza Salami",
+   "brand": null,
+   "description_lines": [
+    "Tiefgefroren"
+   ],
+   "badges": [],
+   "image_description": "A box of Steinofen Genuss Pizza Salami",
+   "price_raw": "1,69",
+   "original_price_raw": "2,89",
+   "discount_raw": "-42%",
+   "quantity_raw": "320 g Packung",
+   "unit_price_raw": "1 kg = 5,59",
+   "deposit_raw": null,
+   "price": "1.69",
+   "original_price": "2.89",
+   "discount_pct": "42",
+   "quantity": {
+    "amount": "320",
+    "unit": "g",
+    "pack_count": 1
+   },
+   "unit_price": {
+    "value": "5.59",
+    "per_amount": "1",
+    "per_unit": "kg"
+   },
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-7",
+   "page": 1,
+   "bbox": {
+    "x0": 0.018,
+    "y0": 0.578,
+    "x1": 0.331,
+    "y1": 0.766
+   },
+   "image_bbox": {
+    "x0": 0.028,
+    "y0": 0.578,
+    "x1": 0.331,
+    "y1": 0.72
+   },
+   "product_name": "Quellklar Mineralwasser",
+   "brand": null,
+   "description_lines": [
+    "Classic"
+   ],
+   "badges": [],
+   "image_description": "A crate of Quellklar mineral water bottles and one single bottle next to it",
+   "price_raw": "3,99",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "6 x 1,5 l PET-Flaschen",
+   "unit_price_raw": "1 l = 0,44",
+   "deposit_raw": "zzgl. 1,50 Pfand",
+   "price": "3.99",
+   "original_price": null,
+   "discount_pct": null,
+   "quantity": {
+    "amount": "1.5",
+    "unit": "l",
+    "pack_count": 6
+   },
+   "unit_price": {
+    "value": "0.44",
+    "per_amount": "1",
+    "per_unit": "l"
+   },
+   "deposit": "1.50",
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-8",
+   "page": 1,
+   "bbox": {
+    "x0": 0.353,
+    "y0": 0.584,
+    "x1": 0.653,
+    "y1": 0.763
+   },
+   "image_bbox": {
+    "x0": 0.353,
+    "y0": 0.584,
+    "x1": 0.653,
+    "y1": 0.712
+   },
+   "product_name": "Schola Schokolade",
+   "brand": null,
+   "description_lines": [
+    "Alpenvollmilch"
+   ],
+   "badges": [],
+   "image_description": "An eggplant with a purple banner that says Schola",
+   "price_raw": "0,99",
+   "original_price_raw": "1,29",
+   "discount_raw": "-23%",
+   "quantity_raw": "100 g Tafel",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "price": "0.99",
+   "original_price": "1.29",
+   "discount_pct": "23",
+   "quantity": {
+    "amount": "100",
+    "unit": "g",
+    "pack_count": 1
+   },
+   "unit_price": null,
+   "deposit": null,
+   "extraction_confidence": null
+  },
+  {
+   "id": "o-9",
+   "page": 1,
+   "bbox": {
+    "x0": 0.67,
+    "y0": 0.584,
+    "x1": 0.989,
+    "y1": 0.766
+   },
+   "image_bbox": {
+    "x0": 0.68,
+    "y0": 0.584,
+    "x1": 0.989,
+    "y1": 0.705
+   },
+   "product_name": "Softina Toilettenpapier Samtweich",
+   "brand": null,
+   "description_lines": [],
+   "badges": [],
+   "image_description": "A pack of Softina Samtweich toilet paper, 3 layers",
+   "price_raw": "2,79",
+   "original_price_raw": null,
+   "discount_raw": null,
+   "quantity_raw": "8 x 150 Blatt Packung",
+   "unit_price_raw": null,
+   "deposit_raw": null,
+   "price": "2.79",
+   "original_price": null,
+   "discount_pct": null,
+   "quantity": {
+    "amount": "150",
+    "unit": "sheet",
+    "pack_count": 8
+   },
+   "unit_price": null,
+   "deposit": null,
+   "extraction_confidence": null
+  }
+ ],
+ "validity": {
+  "raw": "Gültig von Mo. 07.10. bis Sa. 12.10.",
+  "from_day": 7,
+  "from_month": 10,
+  "from_weekday": "Mo",
+  "until_day": 12,
+  "until_month": 10,
+  "until_weekday": "Sa",
+  "bbox": {
+   "x0": 0.0,
+   "y0": 0.152,
+   "x1": 0.56,
+   "y1": 0.178
+  }
+ },
+ "page_refs": [
+  {
+   "raw": "Rezept auf Seite 6.",
+   "target_page": 6,
+   "page": 1,
+   "bbox": {
+    "x0": 0.535,
+    "y0": 0.77,
+    "x1": 0.69,
+    "y1": 0.905
+   }
+  }
+ ],
+ "text_blocks": [
+  {
+   "text": "Rezeptidee: Cremige Kürbissuppe mit gerösteten Kernen. Rezept auf Seite 6.",
+   "page": 1,
+   "bbox": {
+    "x0": 0.535,
+    "y0": 0.77,
+    "x1": 0.69,
+    "y1": 0.905
+   }
+  },
+  {
+   "text": "Noch mehr Inspiration? Rezepte, Tipps und aktuelle Angebote auf frischfeld-markt.de",
+   "page": 1,
+   "bbox": {
+    "x0": 0.7,
+    "y0": 0.77,
+    "x1": 0.975,
+    "y1": 0.905
+   }
+  },
+  {
+   "text": "Regional. Vielfältig. Einfach gut.",
+   "page": 1,
+   "bbox": {
+    "x0": 0.02,
+    "y0": 0.77,
+    "x1": 0.29,
+    "y1": 0.905
+   }
+  }
+ ]
+}
