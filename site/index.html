@@ -137,7 +137,7 @@ pre.json .k{color:#93c5fd} pre.json .s{color:#86efac} pre.json .r{color:#fca5a5}
         <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">13 Prüfungen</span>
         <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">Golden Set 9/9 · P = R = 1,00</span>
         <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">Mutations-Recall 95 %</span>
-        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">187 automatisierte Tests</span>
+        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">190 automatisierte Tests</span>
       </div>
       <p style="font-size:.6em;margin-top:1.4em;opacity:.8">FlyerCheck – Proof of Concept auf Google Gemini, Azure OpenAI über denselben Port anschließbar · Oktober 2026</p>
     </div>
@@ -708,7 +708,7 @@ gedruckt 5,59 €/kg → <span class="r">Fehler</span>
     <div>
       <h3 style="font-size:.7em">Pipeline (GitHub Actions) – heute</h3>
       <div class="flow" style="font-size:.48em">
-        <div class="st"><b>Lint</b>ruff</div><div class="ar">›</div><div class="st"><b>Tests</b>187 · pytest</div><div class="ar">›</div>
+        <div class="st"><b>Lint</b>ruff</div><div class="ar">›</div><div class="st"><b>Tests</b>190 · pytest</div><div class="ar">›</div>
         <div class="st"><b>Replay</b>Beispiel-Flyer</div><div class="ar">›</div><div class="st" style="background:var(--greenbg)"><b>Eval-Gate</b>Golden Set</div><div class="ar">›</div>
         <div class="st"><b>Mutation</b>Eval</div><div class="ar">›</div><div class="st"><b>Bericht</b>Artefakt</div>
       </div>
@@ -802,7 +802,7 @@ gedruckt 5,59 €/kg → <span class="r">Fehler</span>
 <span class="m">$</span> uv run flyercheck mutate-eval
 <span class="s">OVERALL   41 cases · 39 detected · 95.1 % · collateral FP 0</span>
 <span class="m">$</span> uv run pytest -q
-<span class="s">187 passed</span></pre>
+<span class="s">190 passed, 1 xfailed</span></pre>
   <p class="small" style="margin-top:8px">Stack: Python 3.12 · pydantic · Gemini (gemini-3.5-flash + Fallback-Kette) · Azure-OpenAI-Adapter · FastAPI · Docker · GitHub Actions · reveal.js via GitHub Pages</p>
   <aside class="notes">Die Berichte werden bei jedem Push in der GitHub-Pages-Pipeline aus den aufgezeichneten LLM-Antworten neu erzeugt.</aside>
 </section>
