@@ -18,13 +18,32 @@ class LLMPort(Protocol):
         ...
 
 
+def image_digest(img: bytes) -> bytes:
+    """Digest of the decoded pixels (mode, size, raw RGB data), not of the encoded bytes.
+
+    PNG/zlib output differs across platforms and library versions; pixels do not. This keeps recording
+    keys stable between macOS dev machines and Linux CI. Falls back to the raw bytes if not decodable.
+    """
+    try:
+        import io
+
+        from PIL import Image
+
+        with Image.open(io.BytesIO(img)) as im:
+            im = im.convert("RGB")
+            return hashlib.sha256(f"{im.size}".encode() + im.tobytes()).digest()
+    except Exception:  # noqa: BLE001  (non-image payloads hash as bytes)
+        return hashlib.sha256(img).digest()
+
+
 def request_key(purpose: str, prompt: str, images: list[bytes], schema: dict) -> str:
-    """Stable recording key. Uses purpose (not model) so fallback models don't invalidate recordings."""
+    """Stable recording key. Uses purpose (not model) so fallback models don't invalidate recordings,
+    and decoded pixels (not PNG bytes) so keys are identical across platforms."""
     h = hashlib.sha256()
     for part in (purpose, prompt, json.dumps(schema, sort_keys=True)):
         h.update(part.encode())
     for img in images:
-        h.update(hashlib.sha256(img).digest())
+        h.update(image_digest(img))
     return h.hexdigest()[:32]
 
 
