@@ -46,13 +46,17 @@ class PromptFakeLLM(FakeLLM):
         return self.default
 
 
+def _v01(findings):
+    return [f for f in findings if f.check_id == "V-01"]
+
+
 def _by_offer(findings):
-    return {f.offer_name: f for f in findings}
+    return {f.offer_name: f for f in _v01(findings)}
 
 
 def test_schola_fail_others_pass(designer_ctx):
     llm = PromptFakeLLM({"Schola Schokolade": _resp("no", 0.95, "an aubergine")})
-    findings = run_vision_checks(designer_ctx, llm)
+    findings = _v01(run_vision_checks(designer_ctx, llm))
     assert [f.offer_id for f in findings] == [o.id for o in designer_ctx.offers]
     assert len(llm.calls) == len(designer_ctx.offers)
     by = _by_offer(findings)
@@ -93,7 +97,7 @@ def test_llm_error_becomes_error_finding(designer_ctx):
 def test_no_bbox_not_evaluable(designer_ctx):
     designer_ctx.offers[0] = designer_ctx.offers[0].model_copy(update={"bbox": None, "image_bbox": None})
     llm = PromptFakeLLM({})
-    findings = run_vision_checks(designer_ctx, llm)
+    findings = _v01(run_vision_checks(designer_ctx, llm))
     assert findings[0].status is Status.NOT_EVALUABLE
     assert len(llm.calls) == len(designer_ctx.offers) - 1
 
