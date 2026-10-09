@@ -15,27 +15,33 @@
   --red:#dc2626; --redbg:#fef2f2; --amber:#d97706; --amberbg:#fffbeb;
   --violet:#7c3aed; --violetbg:#f5f3ff; --blue:#2563eb; --bluebg:#eff6ff; --grey:#94a3b8;
 }
-.reveal{font-family:Inter,system-ui,sans-serif;color:var(--ink);font-size:24px}
+html,body{background:#fff}
+.reveal{font-family:Inter,system-ui,sans-serif;color:var(--ink);font-size:31px}
 .reveal .slides{text-align:left}
-.reveal .slides section{height:100%;padding:0 6px}
+.reveal .slides section{height:100%;padding:0 4px;box-sizing:border-box}
 .reveal h1,.reveal h2,.reveal h3{font-family:Inter,system-ui,sans-serif;text-transform:none;color:var(--ink);letter-spacing:-.02em;margin:0}
-.reveal h2{font-size:1.45em;font-weight:800;line-height:1.15;margin-bottom:.15em}
-.reveal h3{font-size:.95em;font-weight:700;margin-bottom:.3em}
-.kicker{font-size:.62em;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:.35em}
-.lead{font-size:.8em;color:var(--ink2);margin:.2em 0 .6em}
-.small{font-size:.66em;color:var(--ink2)} .tiny{font-size:.55em;color:var(--mute)}
+.reveal h2{font-size:1.2em;font-weight:800;line-height:1.14;margin-bottom:.2em}
+.reveal h3{font-size:1em;font-weight:700;margin-bottom:.3em}
+.reveal a{color:var(--blue)}
+.kicker{font-size:.56em;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:.3em}
+.lead{font-size:.78em;color:var(--ink2);margin:.2em 0 .6em}
+.small{font-size:.62em;color:var(--ink2);line-height:1.4} .tiny{font-size:.56em;color:var(--mute)}
+.card .tiny,.kpi .tiny,.box .tiny{font-size:.85em}
+.sub{display:block;font-size:16px;font-weight:500;color:var(--mute);margin-top:2px}
 .reveal p{margin:.3em 0}
-.reveal ul{margin:0 0 0 1em;padding:0} .reveal li{margin:.18em 0}
+.reveal ul{margin:0 0 0 1em;padding:0} .reveal li{margin:.2em 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.card{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.66em;line-height:1.35}
-.card h3{font-size:1.15em}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:12px 15px;font-size:.62em;line-height:1.38;box-sizing:border-box}
+.card h3{font-size:1.1em}
 .card.g{background:var(--greenbg);border-color:#bbf7d0}.card.r{background:var(--redbg);border-color:#fecaca}
 .card.a{background:var(--amberbg);border-color:#fde68a}.card.v{background:var(--violetbg);border-color:#ddd6fe}
 .card.b{background:var(--bluebg);border-color:#bfdbfe}
-.tag{display:inline-block;font-size:.78em;font-weight:700;border-radius:999px;padding:1px 9px;margin:1px 2px 1px 0;white-space:nowrap}
+.card.dark{background:#0f172a;color:#fff;border:0}
+.box.ziel,.st.ziel{border-style:dashed!important;border-color:var(--grey)!important;background:#fff!important}
+.zl{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px dashed var(--grey);border-radius:6px;padding:0 5px;margin-left:4px;vertical-align:2px}
+.tag{display:inline-block;font-size:.8em;font-weight:700;border-radius:999px;padding:1px 9px;margin:1px 2px 1px 0;white-space:nowrap}
 .t-llm{background:var(--violetbg);color:var(--violet);border:1px solid #ddd6fe}
 .t-code{background:var(--greenbg);color:var(--green);border:1px solid #bbf7d0}
 .t-human{background:var(--bluebg);color:var(--blue);border:1px solid #bfdbfe}
@@ -43,61 +49,77 @@
 .s-fail{background:var(--red);color:#fff}.s-nr{background:var(--amber);color:#fff}.s-ne{background:var(--grey);color:#fff}
 .s-pass{background:var(--green2);color:#fff}.s-err{background:var(--violet);color:#fff}
 .mono{font-family:"JetBrains Mono",monospace}
-.big{font-size:2.1em;font-weight:800;letter-spacing:-.03em;line-height:1}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
-.kpi .big{color:var(--green)} .kpi .lbl{font-size:.6em;color:var(--ink2);margin-top:4px}
-/* flow */
-.flow{display:flex;align-items:stretch;gap:0;font-size:.6em}
-.flow .st{flex:1;border-radius:12px;padding:10px 10px;border:1px solid var(--line);background:#fff;position:relative}
-.flow .st b{display:block;font-size:1.08em;margin-bottom:3px}
-.flow .ar{width:22px;display:flex;align-items:center;justify-content:center;color:var(--mute);font-weight:800}
-/* flyer */
+.big{font-size:2em;font-weight:800;letter-spacing:-.03em;line-height:1}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;box-sizing:border-box}
+.kpi .big{color:var(--green)} .kpi .lbl{font-size:.56em;color:var(--ink2);margin-top:4px;line-height:1.3}
+.flow{display:flex;align-items:stretch;gap:0;font-size:.56em}
+.flow .st{flex:1;min-width:0;border-radius:12px;padding:10px 11px;border:1px solid var(--line);background:#fff;position:relative;line-height:1.3;box-sizing:border-box}
+.flow .st b{display:block;font-size:1.06em;margin-bottom:3px}
+.flow .ar{flex:0 0 20px;display:flex;align-items:center;justify-content:center;color:var(--mute);font-weight:800}
 .flyer{position:relative;display:inline-block;border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,.18)}
-.flyer img{display:block;margin:0;max-width:none}
-.bx{position:absolute;border:3px solid var(--red);border-radius:6px;box-shadow:0 0 0 2000px rgba(0,0,0,0)}
+.flyer img{display:block;margin:0;max-width:none;max-height:none}
+.bx{position:absolute;border:3px solid var(--red);border-radius:6px}
 .bx.am{border-color:var(--amber)} .bx.dash{border-style:dashed}
 .num{position:absolute;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font-size:14px;font-weight:800;
      display:flex;align-items:center;justify-content:center;transform:translate(-40%,-40%);box-shadow:0 2px 6px rgba(0,0,0,.3)}
 .num.am{background:var(--amber)}
 .flist{font-size:.6em;line-height:1.3}
-.flist div{display:flex;gap:9px;align-items:flex-start;padding:5px 0;border-bottom:1px solid var(--line)}
+.flist div{display:flex;gap:9px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--line)}
 .flist .n{flex:0 0 22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;font-size:.85em;display:flex;align-items:center;justify-content:center}
 .flist .n.am{background:var(--amber)}
-table.t{border-collapse:collapse;width:100%;font-size:.58em}
-table.t th{text-align:left;color:var(--mute);font-weight:600;border-bottom:2px solid var(--line);padding:5px 6px}
-table.t td{border-bottom:1px solid var(--line);padding:5px 6px;vertical-align:top}
-.box{border:2px solid var(--ink);border-radius:12px;padding:8px 10px;background:#fff;text-align:center;font-size:.6em;font-weight:600}
-.box.sys{background:var(--green);color:#fff;border-color:var(--green);font-size:.72em}
-.box.ext{border-style:dashed;border-color:var(--grey);color:var(--ink2);font-weight:500}
-.donut{width:170px;height:170px;border-radius:50%;
-  background:conic-gradient(var(--red) 0 19.4%,var(--amber) 19.4% 25%,var(--grey) 25% 27.8%,var(--green2) 27.8% 100%);
+table.t{border-collapse:collapse;width:100%;font-size:.56em}
+table.t th{text-align:left;color:var(--mute);font-weight:600;border-bottom:2px solid var(--line);padding:4px 6px}
+table.t td{border-bottom:1px solid var(--line);padding:6px 7px;vertical-align:top}
+.box{border:2px solid var(--ink);border-radius:12px;padding:8px 10px;background:#fff;text-align:center;font-size:.6em;font-weight:600;box-sizing:border-box}
+/* Donut ohne Stammdaten – 54 Prüfungen: 7 Fehler (12,96 %) · 2 Prüfen (3,70 %) · 10 nicht prüfbar (18,52 %) · 35 ok (64,81 %) */
+.donut{width:160px;height:160px;border-radius:50%;flex:0 0 160px;
+  background:conic-gradient(var(--red) 0 12.96%,var(--amber) 12.96% 16.67%,var(--grey) 16.67% 35.19%,var(--green2) 35.19% 100%);
   display:flex;align-items:center;justify-content:center}
-.donut>div{width:104px;height:104px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.legend{font-size:.58em;line-height:1.7}.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
-.bar{height:16px;border-radius:8px;background:var(--line);overflow:hidden}.bar>i{display:block;height:100%;border-radius:8px}
-.title-slide{background:linear-gradient(135deg,#052e16 0%,#14532d 55%,#166534 100%)}
+.donut>div{width:98px;height:98px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.legend{font-size:.58em;line-height:1.6}.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .title-slide h1,.title-slide p,.title-slide .kicker{color:#fff}
-.title-slide h1{font-size:2.15em;font-weight:800;line-height:1.05;letter-spacing:-.03em}
+.title-slide h1{font-size:1.95em;font-weight:800;line-height:1.05;letter-spacing:-.03em;color:#fff}
 .reveal .progress{color:var(--green)}
 .reveal .slide-number{background:transparent;color:var(--mute);font-family:Inter;font-size:13px}
-.foot{position:absolute;bottom:4px;left:6px;font-size:.45em;color:var(--mute)}
-.q{display:inline-block;background:var(--ink);color:#fff;border-radius:6px;padding:0 7px;font-size:.62em;font-weight:700;margin-right:6px;vertical-align:4px}
-.matrix{display:grid;grid-template-columns:28px repeat(3,1fr);grid-template-rows:repeat(3,92px) 24px;gap:5px;font-size:.55em}
+.q{display:inline-block;background:var(--ink);color:#fff;border-radius:6px;padding:0 7px;font-size:.62em;font-weight:700;margin-right:6px;vertical-align:3px}
+.matrix{display:grid;grid-template-columns:28px repeat(3,1fr);grid-template-rows:repeat(3,128px) 26px;gap:5px;font-size:.5em}
 .matrix .c{border-radius:8px;padding:5px;display:flex;flex-wrap:wrap;gap:4px;align-content:flex-start}
 .chip{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-weight:600}
 .axis{display:flex;align-items:center;justify-content:center;color:var(--mute);font-weight:600}
 .vert{writing-mode:vertical-rl;transform:rotate(180deg)}
-.lane{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:center;font-size:.6em;margin:6px 0}
-.lane .who{font-weight:700;color:var(--ink2)}
-.steps{display:flex;gap:6px;flex-wrap:wrap}.steps span{background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 9px}
-.steps span.pain{border-color:#fecaca;background:var(--redbg)}
-.steps span.auto{border-color:#bbf7d0;background:var(--greenbg)}
-.gantt{font-size:.56em}.gantt .row{display:grid;grid-template-columns:150px 1fr;align-items:center;margin:4px 0}
-.gantt .track{position:relative;height:20px;background:var(--soft);border-radius:6px}
-.gantt .seg{position:absolute;top:0;bottom:0;border-radius:6px;color:#fff;font-size:.85em;font-weight:700;padding-left:6px;display:flex;align-items:center;white-space:nowrap}
-pre.json{font-family:"JetBrains Mono",monospace;font-size:.5em;line-height:1.35;background:#0f172a;color:#e2e8f0;border-radius:12px;padding:12px 14px;margin:0;box-shadow:none;width:100%}
-pre.json .k{color:#93c5fd}.pre.json .s{color:#86efac}
+.gantt{font-size:.54em}.gantt .row{display:grid;grid-template-columns:170px 1fr;align-items:center;margin:4px 0}
+.gantt .track{position:relative;height:22px;background:var(--soft);border-radius:6px;overflow:hidden}
+.gantt .seg{position:absolute;top:0;bottom:0;border-radius:6px;color:#fff;font-size:.85em;font-weight:700;padding:0 6px;box-sizing:border-box;display:flex;align-items:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+pre.json{font-family:"JetBrains Mono",monospace;font-size:.48em;line-height:1.38;background:#0f172a;color:#e2e8f0;border-radius:12px;padding:10px 12px;margin:0;box-shadow:none;width:100%;max-width:100%;box-sizing:border-box;white-space:pre-wrap;word-break:break-word}
+.st pre.json{font-size:.82em}
+pre.json .k{color:#93c5fd} pre.json .s{color:#86efac} pre.json .r{color:#fca5a5} pre.json .m{color:#94a3b8}
 .check{color:var(--green);font-weight:800}.cross{color:var(--red);font-weight:800}
+.proc{display:grid;grid-template-columns:62px repeat(6,1fr);gap:8px 12px;align-items:stretch;font-size:.56em}
+.proc .who{font-weight:800;color:var(--red);display:flex;align-items:center;font-size:1.1em}
+.proc .p{background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 8px;text-align:center;display:flex;align-items:center;justify-content:center;line-height:1.25;min-height:46px;position:relative}
+.proc .p.pain{background:var(--redbg);border-color:#fecaca}.proc .p.auto{background:var(--greenbg);border-color:#bbf7d0}.proc .p.hum{background:var(--bluebg);border-color:#bfdbfe}
+.proc .p::after{content:"›";position:absolute;right:-10px;color:var(--mute);font-weight:800}
+.proc .p.end::after{content:none}
+.mbars{font-size:.6em}
+.mrow{display:grid;grid-template-columns:250px 1fr 150px;gap:8px;align-items:center;margin:6px 0}
+.mrow .bar{height:18px;border-radius:5px;background:var(--line);overflow:hidden}
+.mrow .bar>i{display:block;height:100%;background:var(--green2);border-radius:5px}
+.mrow.hl .bar>i{background:var(--amber)} .mrow.hl{font-weight:700}
+.mrow .v{text-align:right;font-variant-numeric:tabular-nums}
+.mrow.tot{border-top:2px solid var(--line);padding-top:5px;font-weight:800}
+.mrow.tot .bar>i{background:var(--green)}
+.crop{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 8px 30px rgba(15,23,42,.18)}
+.crop img{position:absolute;margin:0;max-width:none;max-height:none}
+.chain{display:flex;flex-direction:column;gap:6px;font-size:.6em}
+.chain .lnk{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;line-height:1.3}
+.chain .ic{width:50px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:.95em}
+.chain .dn{text-align:center;color:var(--mute);font-size:.9em;line-height:1}
+.pill{display:inline-block;border-radius:8px;padding:0 7px;font-family:"JetBrains Mono",monospace;font-weight:600;background:#fff;border:1px solid var(--line)}
+.trk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:.5em}
+.trk div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:8px;padding:5px 6px;line-height:1.25}
+.trk b{display:block}
+.svgdiag text{font-family:Inter,system-ui,sans-serif}
+.appx .kicker{color:var(--mute)}
 </style>
 </head>
 <body>
@@ -105,123 +127,141 @@ pre.json .k{color:#93c5fd}.pre.json .s{color:#86efac}
 
 <!-- 1 TITEL -->
 <section class="title-slide" data-background-gradient="linear-gradient(135deg,#052e16 0%,#14532d 55%,#166534 100%)">
-  <div class="grid2" style="align-items:center;grid-template-columns:1.35fr .65fr;height:100%">
+  <div class="grid2" style="align-items:center;grid-template-columns:1.4fr .6fr;height:100%">
     <div>
-      <div class="kicker" style="color:#86efac">Fallstudie · KI Consultant</div>
-      <h1>KI-gestützte Konsistenzprüfung von Angebotsflyern</h1>
-      <p style="font-size:.85em;margin-top:.6em;opacity:.9">Lösungsansatz · Zielarchitektur · Umsetzung &amp; Betrieb · Risiken</p>
-      <p style="font-size:.62em;margin-top:1.6em;opacity:.75">FlyerCheck – lauffähiger Proof of Concept auf Basis von Google Gemini<br>Oktober 2026</p>
+      <div class="kicker" style="color:#86efac">Arbeitsprobe · KI Consultant</div>
+      <h1>KI-gestützte Konsistenz&shy;prüfung von Angebotsflyern</h1>
+      <p style="font-size:.8em;margin-top:.6em;opacity:.92">Zielarchitektur · Umsetzung &amp; Betrieb · Risiken &amp; Grenzen</p>
+      <div style="display:flex;gap:10px;margin-top:1.1em;flex-wrap:wrap;font-size:.56em">
+        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">lauffähiger PoC</span>
+        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">13 Prüfungen</span>
+        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">Golden Set 9/9 · P = R = 1,00</span>
+        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">Mutations-Recall 95 %</span>
+        <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;font-size:1em;padding:4px 12px">187 automatisierte Tests</span>
+      </div>
+      <p style="font-size:.6em;margin-top:1.4em;opacity:.8">FlyerCheck – Proof of Concept auf Google Gemini, Azure OpenAI über denselben Port anschließbar · Oktober 2026</p>
     </div>
     <div style="text-align:center">
-      <div class="flyer" style="width:230px">
-        <img src="assets/flyer.jpg" alt="Beispiel-Flyer" style="width:230px">
+      <div class="flyer" style="width:260px">
+        <img src="assets/flyer.jpg" alt="Beispiel-Flyer" style="width:260px">
         <div class="bx" style="left:35.3%;top:58.4%;width:30%;height:12.8%"></div>
         <div class="bx" style="left:67.7%;top:38.1%;width:30.9%;height:19.5%"></div>
         <div class="bx" style="left:0%;top:15.2%;width:56%;height:2.6%"></div>
       </div>
     </div>
   </div>
-  <aside class="notes">Begrüßung. Ich zeige einen Lösungsansatz und einen lauffähigen PoC, der die Prüfungen auf dem Beispiel-Flyer tatsächlich durchführt.</aside>
+  <aside class="notes">Begrüßung. Ich zeige in rund 15 Minuten einen Lösungsansatz entlang der drei Leitfragen – und einen lauffähigen PoC, der die Prüfungen auf dem Beispiel-Flyer tatsächlich durchführt.</aside>
 </section>
 
 <!-- 2 AGENDA -->
 <section>
   <div class="kicker">Agenda</div>
-  <h2>Drei Leitfragen – beantwortet mit Analyse, Architektur und einem funktionierenden PoC</h2>
+  <h2>Drei Leitfragen – beantwortet mit Analyse, Architektur und einem messbaren PoC</h2>
   <div class="grid2" style="margin-top:.6em;grid-template-columns:1fr 1.1fr">
-    <div class="card" style="font-size:.7em">
+    <div class="card" style="font-size:.66em">
       <ol style="margin-left:1.1em;line-height:1.75">
-        <li>Ausgangslage &amp; Aufgabenverständnis</li>
+        <li>Ausgangslage, Aufgabenverständnis &amp; Fehlerklassen</li>
         <li>Analyse des Beispiel-Flyers</li>
         <li><b>Lösungsprinzip &amp; Zielarchitektur</b> <span class="q">Q1</span></li>
-        <li><b>Umsetzung, Betrieb &amp; Dokumentation</b> <span class="q">Q2</span></li>
-        <li>Ergebnisse des PoC</li>
+        <li><b>Umsetzung, Qualitätssicherung &amp; Betrieb</b> <span class="q">Q2</span></li>
+        <li>Ergebnisse des PoC – inkl. Stammdaten-Abgleich</li>
         <li><b>Risiken &amp; Grenzen</b> <span class="q">Q3</span></li>
-        <li>Vorgehen, Roadmap &amp; nächste Schritte</li>
+        <li>Roadmap, Nutzen &amp; Entscheidungsbedarf</li>
       </ol>
+      <p style="margin-top:6px;color:var(--mute)">Anhang: Datenmodell · CI/CD &amp; Doku · Vorgehen · Links</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px">
       <div class="card g"><span class="q">Q1</span><b>Wie sieht die Zielarchitektur für die automatisierte Prüfung aus?</b></div>
       <div class="card b"><span class="q">Q2</span><b>Wie werden die Prüfungen umgesetzt, produktiv bereitgestellt und dokumentiert?</b></div>
       <div class="card r"><span class="q">Q3</span><b>Welche Risiken und Grenzen hat die Lösung?</b></div>
-      <div class="tiny">Randbedingung: LLMs in Azure oder Google Cloud verfügbar · Annahmen selbst getroffen</div>
+      <div class="small">Randbedingung: LLMs in Azure oder Google Cloud verfügbar · fehlende Informationen durch explizite Annahmen ersetzt</div>
     </div>
   </div>
+  <aside class="notes">Die Struktur folgt den drei Leitfragen der Aufgabe. Q1 Architektur, Q2 Umsetzung und Betrieb, Q3 Risiken – dazwischen die Belege aus dem PoC.</aside>
 </section>
 
 <!-- 3 AUSGANGSLAGE -->
 <section>
   <div class="kicker">Ausgangslage</div>
-  <h2>Heute prüfen Menschen jede Woche jeden Flyer manuell – unter Termindruck</h2>
-  <p class="lead">Fehler in Preisen, Grundpreisen oder Bildern sind teuer: rechtliches Risiko (PAngV, UWG), Reputation, Kassendifferenzen.</p>
-  <div class="lane"><div class="who">Ist-Prozess</div>
-    <div class="steps"><span>Flyer aus DTP</span><span class="pain">Sichtprüfung Seite für Seite</span><span class="pain">Preise nachrechnen</span><span class="pain">Abgleich mit Kampagne</span><span>Korrekturschleife</span><span>Freigabe</span></div></div>
-  <div class="lane"><div class="who">Soll-Prozess</div>
-    <div class="steps"><span>Flyer aus DTP</span><span class="auto">Automatische Extraktion</span><span class="auto">Regel- &amp; KI-Prüfungen</span><span class="auto">Befunde mit Evidenz</span><span class="pain" style="background:var(--bluebg);border-color:#bfdbfe">Mensch bewertet nur Auffälligkeiten</span><span>Freigabe</span></div></div>
-  <div class="grid4" style="margin-top:.8em">
-    <div class="kpi"><div class="big" style="font-size:1.5em">wöchentlich</div><div class="lbl">Taktung – Prüfung liegt im kritischen Pfad zur Veröffentlichung</div></div>
-    <div class="kpi"><div class="big" style="font-size:1.5em">10 Fehlerklassen</div><div class="lbl">von Rechenfehlern bis Bild-Text-Widerspruch</div></div>
-    <div class="kpi"><div class="big" style="font-size:1.5em">vertraulich</div><div class="lbl">unveröffentlichte Preise → EU-Region, kein Training auf Daten</div></div>
-    <div class="kpi"><div class="big" style="font-size:1.5em">Mensch</div><div class="lbl">bleibt verantwortlich für die Freigabe</div></div>
-  </div>
-</section>
-
-<!-- 4 VERSTÄNDNIS & ANNAHMEN -->
-<section>
-  <div class="kicker">Aufgabenverständnis</div>
-  <h2>Ziel ist Entscheidungsunterstützung mit Evidenz – nicht autonome Freigabe</h2>
-  <div class="grid3" style="margin-top:.5em">
-    <div class="card g"><h3>Im Scope</h3><ul>
-      <li>PDF/Bild-Eingang, Extraktion inkl. Position</li><li>Preis-, Grundpreis-, Rabatt-, Pfand-, Datumsregeln</li>
-      <li>Bild ↔ Text-Abgleich</li><li>Seitenverweise, Pflichtangaben</li><li>Befundbericht, Review-Entscheidungen, Evaluation</li></ul></div>
-    <div class="card r"><h3>Nicht im Scope (PoC)</h3><ul>
-      <li>Flyer automatisch korrigieren</li><li>Rückschreiben in PIM/Preissysteme</li>
-      <li>Automatische Freigabe</li><li>Juristische Bewertung von Werbeaussagen</li></ul></div>
-    <div class="card"><h3>Annahmen</h3>
-      <table class="t" style="font-size:1em"><tr><td><b>A1</b></td><td>Eingang: druckfertiges PDF</td></tr>
-      <tr><td><b>A2</b></td><td>Stammdaten (PIM) im PoC nicht verfügbar → simuliert</td></tr>
-      <tr><td><b>A3</b></td><td>Cloud-LLM in EU-Region zulässig</td></tr>
-      <tr><td><b>A4</b></td><td>Kampagnenjahr aus Metadaten / Vorgabe</td></tr>
-      <tr><td><b>A5</b></td><td>Rechtsrahmen: PAngV, UWG</td></tr></table></div>
-  </div>
-  <p class="small" style="margin-top:.7em">Prinzip: <b>„Keine Befunde“ heißt nicht „fehlerfrei“.</b> Was nicht geprüft werden konnte, wird sichtbar als <span class="tag s-ne">nicht prüfbar</span> ausgewiesen.</p>
-</section>
-
-<!-- 5 TAXONOMIE -->
-<section>
-  <div class="kicker">Problemzerlegung</div>
-  <h2>„Konsistenz“ zerfällt in 10 Fehlerklassen – jede braucht die passende Methode</h2>
-  <div class="grid5" style="margin-top:.6em">
-    <div class="card"><b>E-01</b> Produkt ↔ Bild<br><span class="tag t-llm">KI-Vision</span></div>
-    <div class="card"><b>E-02</b> Preis vs. Stammdaten<br><span class="tag t-ref">Referenz</span></div>
-    <div class="card"><b>E-03</b> Arithmetik (Grundpreis, Rabatt)<br><span class="tag t-code">Regel</span></div>
-    <div class="card"><b>E-04</b> Menge &amp; Einheit<br><span class="tag t-code">Regel</span></div>
-    <div class="card"><b>E-05</b> Zuordnung im Layout<br><span class="tag t-llm">KI</span><span class="tag t-code">Geometrie</span></div>
-    <div class="card"><b>E-06</b> Datum &amp; Kampagne<br><span class="tag t-code">Regel</span></div>
-    <div class="card"><b>E-07</b> Werbeaussagen<br><span class="tag t-ref">Referenz</span></div>
-    <div class="card"><b>E-08</b> Vollständigkeit (Grundpreis, Pfand)<br><span class="tag t-code">Regel</span></div>
-    <div class="card"><b>E-09</b> Querverweise &amp; Dubletten<br><span class="tag t-code">Regel</span></div>
-    <div class="card"><b>E-10</b> Lesbarkeit &amp; Technik<br><span class="tag t-llm">CV/OCR</span></div>
+  <h2>Die manuelle Wochenprüfung ist fehleranfällig und teuer – KI soll vorprüfen, der Mensch nur noch entscheiden</h2>
+  <div class="proc" style="margin-top:.5em">
+    <div class="who">Ist</div>
+    <div class="p">Flyer aus DTP</div><div class="p pain">Sichtprüfung Seite für Seite</div><div class="p pain">Preise &amp; Grundpreise nachrechnen</div><div class="p pain">Abgleich mit Kampagne / PIM</div><div class="p pain">Korrektur&shy;schleifen</div><div class="p end">Freigabe</div>
+    <div class="who" style="color:var(--green)">Soll</div>
+    <div class="p">Flyer aus DTP</div><div class="p auto">KI-Extraktion</div><div class="p auto">Regel- &amp; Bildprüfungen</div><div class="p auto">Befunde mit Evidenz</div><div class="p hum">Mensch prüft nur Auffälligkeiten</div><div class="p end">Freigabe</div>
   </div>
   <div class="grid3" style="margin-top:.8em">
-    <div class="card g"><b>Regel (Code)</b> – exakt, reproduzierbar, testbar. Für alles Berechenbare.</div>
-    <div class="card v"><b>KI (multimodales LLM)</b> – Wahrnehmung: Lesen, Gruppieren, Bilder deuten.</div>
-    <div class="card a"><b>Referenz (PIM, Kampagne)</b> – autoritative Daten schlagen Modell-Vermutungen.</div>
+    <div class="card r"><h3>① Ist-Situation &amp; Pain Points</h3><ul>
+      <li><b>Wöchentlicher Takt</b> – Prüfung im kritischen Pfad zum Drucktermin</li>
+      <li>Manuelle Sichtprüfung Seite für Seite</li>
+      <li>Preise, Grundpreise, Rabatte von Hand nachrechnen</li>
+      <li>Abgleich mit Kampagnen- und Preisdaten</li>
+      <li><b>Termindruck</b> → Stichprobe statt Vollprüfung</li></ul></div>
+    <div class="card a"><h3>② Konsequenzen von Fehlern</h3><ul>
+      <li><b>Rechtlich:</b> PAngV (Grundpreis), UWG (irreführende Rabatte, Werbeaussagen) – Abmahnrisiko</li>
+      <li><b>Reputation:</b> falsches Bild, falscher Preis – öffentlich sichtbar</li>
+      <li><b>Operativ:</b> Kassendifferenzen, Kulanz, Nachdruck</li>
+      <li><b>Vertraulich:</b> unveröffentlichte Preise → EU-Region, kein Training</li></ul></div>
+    <div class="card g"><h3>③ Zielbild</h3><ul>
+      <li><b>KI-gestützte Vorprüfung</b> jedes Flyers – vollständig, in Minuten</li>
+      <li>Jeder Befund mit <b>Evidenz</b>: Markierung, erwartet vs. gedruckt</li>
+      <li>Was nicht prüfbar ist, wird <b>sichtbar ausgewiesen</b></li>
+      <li><b>Mensch entscheidet</b> über Auffälligkeiten und bleibt verantwortlich</li></ul></div>
   </div>
+  <aside class="notes">Heute ist die Prüfung manuell, wöchentlich und unter Termindruck – also oft nur stichprobenartig. Fehler kosten rechtlich, reputativ und operativ. Zielbild: Die KI prüft jeden Flyer vollständig vor, der Mensch entscheidet nur noch über belegte Auffälligkeiten.</aside>
 </section>
 
-<!-- 6 FLYER-ANALYSE -->
+<!-- 4 VERSTÄNDNIS + FEHLERKLASSEN -->
+<section>
+  <div class="kicker">Aufgabenverständnis &amp; Problemzerlegung</div>
+  <h2>Ziel ist Entscheidungsunterstützung mit Evidenz – „Konsistenz“ zerfällt in 10 Fehlerklassen</h2>
+  <div class="grid2" style="grid-template-columns:.9fr 1.1fr;margin-top:.4em;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card g"><b>Im Scope:</b> PDF-Eingang, Extraktion mit Position, Preis-/Grundpreis-/Rabatt-/Pfand-/Datumsregeln, Bild ↔ Text, Verweise, Dubletten, Stammdaten-Adapter, Bericht, Review-API, Evaluation</div>
+      <div class="card r"><b>Nicht im Scope:</b> Flyer automatisch korrigieren · Rückschreiben ins PIM · automatische Freigabe · juristische Bewertung von Werbeaussagen</div>
+      <div class="card"><b>Annahmen:</b>
+        <table class="t" style="font-size:1em;margin-top:2px">
+        <tr><td><b>A1</b></td><td>Eingang: druckfertiges PDF</td></tr>
+        <tr><td><b>A2</b></td><td>PIM im PoC nicht verfügbar → synthetische CSV als Stellvertreter</td></tr>
+        <tr><td><b>A3</b></td><td>Cloud-LLM in EU-Region zulässig</td></tr>
+        <tr><td><b>A4</b></td><td>Kampagnenjahr aus Metadaten · Rechtsrahmen PAngV, UWG</td></tr></table></div>
+    </div>
+    <div>
+      <div class="grid2" style="gap:7px">
+        <div class="card" style="padding:7px 10px"><b>E-01</b> Produkt ↔ Bild <span class="tag t-llm">KI-Vision</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-02</b> Preis vs. Stammdaten <span class="tag t-ref">Referenz</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-03</b> Arithmetik (Grundpreis, Rabatt) <span class="tag t-code">Regel</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-04</b> Menge &amp; Einheit <span class="tag t-code">Regel</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-05</b> Zuordnung im Layout <span class="tag t-code">Geometrie</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-06</b> Datum &amp; Kampagne <span class="tag t-code">Regel</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-07</b> Werbeaussagen <span class="tag t-ref">Referenz</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-08</b> Vollständigkeit (Grundpreis, Pfand) <span class="tag t-code">Regel</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-09</b> Querverweise &amp; Dubletten <span class="tag t-code">Regel</span></div>
+        <div class="card" style="padding:7px 10px"><b>E-10</b> Lesbarkeit &amp; Technik <span class="tag t-llm">CV/OCR</span></div>
+      </div>
+      <div class="grid3" style="margin-top:10px;gap:8px">
+        <div class="card g" style="padding:8px 10px"><b>Regel (Code)</b> – exakt, reproduzierbar, testbar</div>
+        <div class="card v" style="padding:8px 10px"><b>KI (LLM)</b> – Wahrnehmung: lesen, gruppieren, Bilder deuten</div>
+        <div class="card a" style="padding:8px 10px"><b>Referenz</b> – autoritative Daten schlagen Vermutungen</div>
+      </div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:.6em">Prinzip: <b>„Keine Befunde“ heißt nicht „fehlerfrei“</b> – was nicht geprüft werden konnte, wird als <span class="tag s-ne">nicht prüfbar</span> ausgewiesen.</p>
+  <aside class="notes">Das System entscheidet nicht, es unterstützt. Statt „KI prüft den Flyer“ zerlege ich das Problem in zehn Fehlerklassen – daraus folgt die Methodenwahl: Rechnen ist Code, Wahrnehmen ist KI, Wahrheit kommt aus Referenzdaten.</aside>
+</section>
+
+<!-- 5 FLYER-ANALYSE -->
 <section>
   <div class="kicker">Analyse des Beispiel-Flyers</div>
-  <h2>Der Beispiel-Flyer enthält mindestens 8 relevante Inkonsistenzen</h2>
-  <div class="grid2" style="grid-template-columns:330px 1fr;align-items:start;margin-top:.3em">
-    <div class="flyer" style="width:330px">
-      <img src="assets/flyer.jpg" alt="Beispiel-Flyer mit markierten Befunden" style="width:330px">
+  <h2>9 Befunde: 7 Fehler, 2 Policy-Fragen – alle von Hand nachgerechnet</h2>
+  <div class="grid2" style="grid-template-columns:400px 1fr;align-items:start;margin-top:.3em;gap:24px">
+    <div class="flyer" style="width:400px">
+      <img src="assets/flyer.jpg" alt="Beispiel-Flyer mit markierten Befunden" style="width:400px">
       <div class="bx" style="left:35.3%;top:58.4%;width:30%;height:12.8%"></div><div class="num" style="left:35.3%;top:58.4%">1</div>
       <div class="bx" style="left:67.7%;top:38.1%;width:30.9%;height:19.5%"></div><div class="num" style="left:67.7%;top:38.1%">2</div>
       <div class="bx" style="left:67%;top:18.1%;width:32.4%;height:19.4%"></div><div class="num" style="left:67%;top:18.1%">3</div>
-      <div class="bx" style="left:35.3%;top:71.4%;width:30%;height:5%"></div><div class="num" style="left:35.3%;top:73.8%">4</div>
-      <div class="bx" style="left:0.4%;top:15.2%;width:55.6%;height:2.6%"></div><div class="num" style="left:1%;top:15.2%">5</div>
+      <div class="bx" style="left:35.3%;top:71.4%;width:30%;height:5%"></div><div class="num" style="left:35.3%;top:76%">4</div>
+      <div class="bx" style="left:0.4%;top:15.2%;width:55.6%;height:2.6%"></div><div class="num" style="left:2%;top:15.2%">5</div>
       <div class="bx" style="left:53.5%;top:77%;width:15.5%;height:13.5%"></div><div class="num" style="left:53.5%;top:77%">6</div>
       <div class="bx am" style="left:67%;top:58.4%;width:31.9%;height:18.2%"></div><div class="num am" style="left:67%;top:58.4%">7</div>
       <div class="bx am dash" style="left:1.8%;top:38.1%;width:34.3%;height:19.5%"></div><div class="num am" style="left:1.8%;top:38.1%">8</div>
@@ -231,400 +271,547 @@ pre.json .k{color:#93c5fd}.pre.json .s{color:#86efac}
       <div><span class="n">2</span><span><b>Pizza – zwei Fehler:</b> Grundpreis 5,59 €/kg gedruckt, korrekt <b>1,69 € / 0,32 kg = 5,28 €/kg</b>; Rabatt −42 % beworben, tatsächlich <b>41,52 %</b> → überhöht (UWG) <span class="tag t-code">Regel</span></span></div>
       <div><span class="n">3</span><span><b>Lachsfilet:</b> Grundpreis fehlt (PAngV) → erwartet 29,90 €/kg <span class="tag t-code">Regel</span></span></div>
       <div><span class="n">4</span><span><b>Schokolade:</b> Grundpreis fehlt → erwartet 9,90 €/kg <span class="tag t-code">Regel</span></span></div>
-      <div><span class="n">5</span><span><b>Gültigkeit:</b> „Mo. 07.10.“ ist 2026 ein <b>Mittwoch</b> (passt nur 2024/2030) <span class="tag t-code">Regel</span></span></div>
+      <div><span class="n">5</span><span><b>Gültigkeit:</b> „Mo 07.10.–Sa 12.10.“ passt zu 2024, nicht zu 2026 (12.10.2026 = Montag) <span class="tag t-code">Regel</span></span></div>
       <div><span class="n">6</span><span><b>Verweis ins Leere:</b> „Rezept auf Seite 6“ – Dokument hat 1 Seite <span class="tag t-code">Regel</span></span></div>
-      <div><span class="n am">7</span><span><b>Toilettenpapier:</b> kein Grundpreis je Blatt/Rolle → Bezugsbasis ist Policy-Frage <span class="tag s-nr">Review</span></span></div>
-      <div><span class="n am">8</span><span><b>Rundung uneinheitlich:</b> Joghurt abgerundet (33,9 → 33 %), Pizza aufgerundet (41,5 → 42 %) <span class="tag s-nr">Review</span></span></div>
-      <div style="border:0;color:var(--mute)"><span class="n" style="background:var(--grey)">–</span><span>Preis vs. Stammdaten: ohne PIM <b>nicht prüfbar</b> – wird explizit ausgewiesen</span></div>
+      <div><span class="n am">7</span><span><b>Toilettenpapier:</b> kein Grundpreis je Blatt/Rolle → Bezugsbasis ist Policy-Frage <span class="tag s-nr">Prüfen</span></span></div>
+      <div><span class="n am">8</span><span><b>Rundung uneinheitlich:</b> Joghurt abgerundet (33,9 → 33 %), Pizza aufgerundet (41,5 → 42 %) <span class="tag s-nr">Prüfen</span></span></div>
+      <div style="border:0;color:var(--mute)"><span class="n" style="background:var(--grey)">?</span><span><b>Offen:</b> Stimmt 1,69 € überhaupt? Ohne Stammdaten <b>nicht prüfbar</b> – Auflösung auf Folie 12</span></div>
+      <p style="margin-top:6px;color:var(--ink2)">Diese Analyse ist zugleich das <b>Golden Set</b> – das Abnahmekriterium für den Code.</p>
     </div>
   </div>
-  <aside class="notes">Alle Zahlen sind nachgerechnet. 5,59 entspricht 1,79/0,32 – vermutlich ein veralteter Preis. Diese Analyse ist gleichzeitig unser Golden Set.</aside>
+  <aside class="notes">Alle Werte sind nachgerechnet, nicht geschätzt. Auffällig: 5,59 €/kg entspricht exakt 1,79 € / 0,32 kg – ein Hinweis, den wir später mit Stammdaten auflösen.</aside>
 </section>
 
-<!-- 7 LÖSUNGSPRINZIP -->
+<!-- 6 LÖSUNGSPRINZIP -->
 <section>
   <div class="kicker">Lösungsprinzip</div>
   <h2>KI nimmt wahr · Code prüft · Mensch entscheidet</h2>
-  <div class="flow" style="margin-top:.7em;font-size:.68em">
+  <div class="flow" style="margin-top:.6em;font-size:.68em">
     <div class="st" style="background:var(--violetbg);border-color:#ddd6fe">
       <b style="color:var(--violet)">① Wahrnehmen – multimodales LLM</b>
-      Liest wörtlich, was gedruckt ist, gruppiert Angebote, liefert Positionen (Bounding Boxes). <b>Rechnet nie.</b>
-      <pre class="json" style="margin-top:8px">price_raw: "1,69"
-quantity_raw: "320 g Packung"
-unit_price_raw: "1 kg = 5,59"</pre></div>
+      Liest wörtlich, was gedruckt ist, gruppiert Angebote, liefert Positionen. <b>Rechnet nie.</b>
+      <pre class="json" style="margin-top:8px"><span class="k">price_raw</span>: <span class="s">"1,69"</span>
+<span class="k">quantity_raw</span>: <span class="s">"320 g Packung"</span>
+<span class="k">unit_price_raw</span>: <span class="s">"1 kg = 5,59"</span></pre></div>
     <div class="ar">➜</div>
     <div class="st" style="background:var(--greenbg);border-color:#bbf7d0">
       <b style="color:var(--green)">② Prüfen – deterministischer Code</b>
       Normalisiert (Dezimal, Einheiten) und prüft Regeln exakt und reproduzierbar.
       <pre class="json" style="margin-top:8px">1,69 € / 0,320 kg = 5,28 €/kg
-gedruckt 5,59 €/kg  → FAIL
-Regel R-01@1.0 · Konfidenz 0,95</pre></div>
+gedruckt 5,59 €/kg → <span class="r">Fehler</span>
+<span class="m">Regel R-01@1.0 · Konfidenz 1,0</span></pre></div>
     <div class="ar">➜</div>
     <div class="st" style="background:var(--bluebg);border-color:#bfdbfe">
       <b style="color:var(--blue)">③ Entscheiden – Mensch</b>
-      Sieht Befund, Markierung im Flyer, beobachteten vs. erwarteten Wert und bestätigt, verwirft oder eskaliert.
-      <div style="margin-top:10px"><span class="tag s-pass">bestätigen</span><span class="tag s-ne">verwerfen</span><span class="tag s-nr">eskalieren</span></div></div>
+      Sieht Befund, Markierung im Flyer, beobachteten vs. erwarteten Wert – und bestätigt, verwirft oder eskaliert.
+      <div style="margin-top:10px"><span class="tag s-pass">bestätigen</span> <span class="tag s-ne">verwerfen</span> <span class="tag s-nr">eskalieren</span></div></div>
   </div>
   <div class="grid3" style="margin-top:.8em">
     <div class="card"><b>Warum nicht „ein LLM prüft alles“?</b> Nicht reproduzierbar, Rechenfehler, keine stabile Evidenz, nicht regressionstestbar.</div>
     <div class="card"><b>Warum nicht nur OCR + Regeln?</b> Bild-Text-Abgleich und freie Layouts sind ohne visuelles Verständnis nicht lösbar.</div>
     <div class="card g"><b>Hybrid</b> = jede Prüfung einzeln testbar, Modelle austauschbar, Befunde auditierbar. <span class="tiny">ADR-0001</span></div>
   </div>
+  <div class="card" style="margin-top:.8em;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+    <b>5 Status:</b><span class="tag s-fail">Fehler</span><span class="tag s-nr">Prüfen</span><span class="tag s-ne">nicht prüfbar</span><span class="tag s-err">Systemfehler</span><span class="tag s-pass">ok</span>
+    <span style="color:var(--mute)">· Schweregrad und Konfidenz getrennt, nie zu einem Score vermischt</span>
+  </div>
+  <aside class="notes">Das ist die zentrale Architekturentscheidung: Das LLM wird nur für Wahrnehmung eingesetzt, nie für Arithmetik. Dadurch ist jeder Befund reproduzierbar und testbar.</aside>
 </section>
 
-<!-- 8 SYSTEMKONTEXT -->
+<!-- 7 SYSTEMKONTEXT -->
 <section>
   <div class="kicker"><span class="q">Q1</span>Zielarchitektur · Systemkontext</div>
-  <h2>FlyerCheck fügt sich als Prüfstufe zwischen Produktion und Freigabe ein</h2>
-  <div style="display:grid;grid-template-columns:1fr 60px 1.25fr 60px 1fr;grid-template-rows:auto auto auto;gap:14px;align-items:center;margin-top:.8em">
-    <div class="box">Flyer-Produktion<br><span class="tiny">DTP / Agentur</span></div>
-    <div style="text-align:center;color:var(--mute)" class="small">PDF +<br>Metadaten ➜</div>
-    <div class="box sys" style="padding:18px">FlyerCheck<br><span style="font-weight:500;font-size:.8em">Extraktion · Prüfregeln · KI-Checks · Evidenzbericht · Review</span></div>
-    <div style="text-align:center;color:var(--mute)" class="small">➜ geprüfter<br>Bericht</div>
-    <div class="box">Bestehende Freigabe<br><span class="tiny">Publikationsworkflow</span></div>
-    <div></div><div></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
-      <div class="box ext">Cloud-LLM<br><span class="tiny">Gemini (Vertex AI EU) · Azure OpenAI</span></div>
-      <div class="box ext">PIM / Preis- &amp; Kampagnen-DB<br><span class="tiny">Referenzdaten</span></div>
-      <div class="box ext">OCR-Dienst<br><span class="tiny">Document AI / Doc. Intelligence</span></div>
-    </div>
-    <div></div><div></div>
-    <div></div><div></div>
-    <div class="box" style="border-color:var(--blue);color:var(--blue)">QA-Reviewer<br><span class="tiny">bestätigt · verwirft · eskaliert</span></div>
-    <div></div><div></div>
-  </div>
-  <p class="small" style="margin-top:.9em">Leitplanken: <b>EU-Datenresidenz</b> · kein Training auf Kundendaten · Zugriff nur über Managed Identity · alle Ergebnisse versioniert (Dokument, Regel, Modell, Prompt).</p>
+  <h2>FlyerCheck ist eine Prüfstufe zwischen Produktion und Freigabe</h2>
+  <svg class="svgdiag" viewBox="0 0 1220 410" width="100%" style="margin-top:10px;max-height:470px" role="img" aria-label="Systemkontext">
+    <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker></defs>
+    <rect x="10" y="60" width="230" height="96" rx="14" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+    <text x="125" y="100" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Flyer-Produktion</text>
+    <text x="125" y="128" text-anchor="middle" font-size="17" fill="#64748b">DTP / Agentur</text>
+    <rect x="400" y="28" width="420" height="160" rx="16" fill="#166534"/>
+    <text x="610" y="72" text-anchor="middle" font-size="28" font-weight="800" fill="#fff">FlyerCheck</text>
+    <text x="610" y="104" text-anchor="middle" font-size="17" fill="#d1fae5">Extraktion · 11 Regeln · 2 KI-Bildprüfungen</text>
+    <text x="610" y="128" text-anchor="middle" font-size="17" fill="#d1fae5">Evidenzbericht · REST-API · Review</text>
+    <text x="610" y="164" text-anchor="middle" font-size="15" fill="#86efac">Container · Python 3.12 · pydantic-Vertrag</text>
+    <rect x="980" y="60" width="230" height="96" rx="14" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+    <text x="1095" y="100" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Freigabe-Workflow</text>
+    <text x="1095" y="128" text-anchor="middle" font-size="17" fill="#64748b">Publikation / Druck</text>
+    <line x1="240" y1="108" x2="396" y2="108" stroke="#64748b" stroke-width="2.5" marker-end="url(#ah)"/>
+    <text x="318" y="96" text-anchor="middle" font-size="16" fill="#334155">PDF + Metadaten</text>
+    <line x1="820" y1="108" x2="976" y2="108" stroke="#64748b" stroke-width="2.5" marker-end="url(#ah)"/>
+    <text x="898" y="96" text-anchor="middle" font-size="16" fill="#334155">Befunde + Bericht</text>
+    <rect x="200" y="280" width="250" height="90" rx="14" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="325" y="315" text-anchor="middle" font-weight="700" fill="#7c3aed" font-size="19">Cloud-LLM (Port)</text>
+    <text x="325" y="342" text-anchor="middle" fill="#334155" font-size="16">Gemini · Azure OpenAI</text>
+    <rect x="485" y="280" width="250" height="90" rx="14" fill="#fffbeb" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="610" y="315" text-anchor="middle" font-weight="700" fill="#d97706" font-size="19">PIM / Preis-DB</text>
+    <text x="610" y="342" text-anchor="middle" fill="#334155" font-size="16">Referenzdaten (PoC: CSV)</text>
+    <rect x="770" y="280" width="250" height="90" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="895" y="315" text-anchor="middle" font-weight="700" fill="#334155" font-size="19">OCR-Gegenprobe</text>
+    <text x="895" y="342" text-anchor="middle" fill="#64748b" font-size="15">Zielbild · Document AI</text>
+    <rect x="1040" y="230" width="175" height="90" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="1127" y="265" text-anchor="middle" font-weight="700" fill="#2563eb" font-size="19">QA-Reviewer</text>
+    <text x="1127" y="292" text-anchor="middle" fill="#334155" font-size="15">bestätigt · verwirft</text>
+    <line x1="470" y1="190" x2="345" y2="276" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ah)"/>
+    <text x="300" y="232" font-size="15" fill="#7c3aed">Wahrnehmung</text>
+    <line x1="610" y1="190" x2="610" y2="276" stroke="#d97706" stroke-width="2.2" marker-end="url(#ah)"/>
+    <text x="620" y="240" font-size="15" fill="#d97706">Preise lesen</text>
+    <line x1="750" y1="190" x2="870" y2="276" stroke="#94a3b8" stroke-width="2.2" marker-end="url(#ah)"/>
+    <line x1="822" y1="170" x2="1060" y2="228" stroke="#2563eb" stroke-width="2.2" marker-end="url(#ah)"/>
+    <text x="930" y="184" font-size="15" fill="#2563eb">Review-API</text>
+    <text x="200" y="400" font-size="15" fill="#64748b">gestrichelt = austauschbarer Adapter hinter einer Schnittstelle (Ports &amp; Adapters)</text>
+  </svg>
+  <p class="small" style="margin-top:.1em">Leitplanken: <b>EU-Datenresidenz</b> · kein Training auf Kundendaten · <b>Workload Identity / Managed Identity, keine Schlüssel</b> · jedes Ergebnis versioniert (Dokument-Hash, Regel, Modell, Prompt).</p>
+  <aside class="notes">FlyerCheck ist keine neue Plattform, sondern eine Prüfstufe im bestehenden Prozess. Alle externen Abhängigkeiten – LLM, Stammdaten, OCR – liegen hinter Schnittstellen und sind austauschbar.</aside>
 </section>
 
-<!-- 9 PIPELINE -->
+<!-- 8 PIPELINE -->
 <section>
   <div class="kicker"><span class="q">Q1</span>Zielarchitektur · Verarbeitungspipeline</div>
   <h2>Sieben Stufen – nur zwei davon nutzen ein LLM</h2>
-  <div class="flow" style="margin-top:.6em">
-    <div class="st"><b>1 Ingest</b>Hash, Version, Seitenbild in nativer Auflösung, Kampagnenjahr<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
-    <div class="st" style="border-color:#ddd6fe"><b>2 Extraktion</b>1 Call/Seite, JSON-Schema, wörtliche Werte + Boxen<br><span class="tag t-llm">LLM</span></div><div class="ar">›</div>
-    <div class="st"><b>3 Normalisierung</b>„6 x 1,5 l“ → 9 l<br>„1,69“ → Decimal<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
-    <div class="st"><b>4 Regeln</b>R-01 … R-10<br>Grundpreis, Rabatt, Pfand, Datum, Layout<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
-    <div class="st" style="border-color:#ddd6fe"><b>5 Vision-Checks</b>Bildausschnitt: „Was ist zu sehen?“ → Abgleich<br><span class="tag t-llm">LLM</span></div><div class="ar">›</div>
-    <div class="st"><b>6 Aggregation</b>Deduplizieren, Schweregrad, Sortierung<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
-    <div class="st" style="border-color:#bfdbfe"><b>7 Bericht &amp; Review</b>HTML mit Markierungen, API, Entscheidungen<br><span class="tag t-human">Mensch</span></div>
+  <div class="flow" style="margin-top:.6em;font-size:.56em">
+    <div class="st"><b>1 Ingest</b>Hash, Version, Seitenbild, Kampagnenjahr<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
+    <div class="st" style="border-color:#c4b5fd;background:var(--violetbg)"><b>2 Extraktion</b>1 Call/Seite, JSON-Schema, wörtliche Werte + Boxen<br><span class="tag t-llm">LLM</span></div><div class="ar">›</div>
+    <div class="st"><b>3 Normali&shy;sierung</b>„6 x 1,5 l“ → 9 l<br>„1,69“ → Decimal<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
+    <div class="st"><b>4 Regeln</b>R-01 … R-10: Grundpreis, Rabatt, Pfand, Datum, Layout, Stammdaten<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
+    <div class="st" style="border-color:#c4b5fd;background:var(--violetbg)"><b>5 Bild&shy;prüfung</b>Ausschnitt erst „blind beschreiben“, dann abgleichen<br><span class="tag t-llm">LLM</span></div><div class="ar">›</div>
+    <div class="st"><b>6 Aggre&shy;gation</b>Deduplizieren, Schweregrad, Sortierung<br><span class="tag t-code">Code</span></div><div class="ar">›</div>
+    <div class="st" style="border-color:#bfdbfe;background:var(--bluebg)"><b>7 Bericht &amp; Review</b>HTML mit Markierungen, REST-API<br><span class="tag t-human">Mensch</span></div>
   </div>
   <div class="grid3" style="margin-top:.8em">
-    <div class="card"><h3>Ports &amp; Adapter</h3>LLM, OCR, Referenzdaten hinter Schnittstellen → Anbieterwechsel per Konfiguration.</div>
-    <div class="card"><h3>Record / Replay</h3>Jede LLM-Antwort wird versioniert aufgezeichnet → deterministische Tests &amp; Offline-Demo.</div>
-    <div class="card"><h3>Robustheit</h3>Retries + Fallback-Modellkette (429/503), Schema-Validierung, Prompt-Injection-Schutz.</div>
+    <div class="card"><h3>Ports &amp; Adapter</h3>LLM (Gemini ⇄ Azure OpenAI), OCR, Referenzdaten hinter Schnittstellen → Anbieterwechsel per Konfiguration.</div>
+    <div class="card"><h3>Record / Replay</h3>Jede LLM-Antwort wird versioniert aufgezeichnet → deterministische Tests, Offline-Demo in <b>0,6 s</b>.</div>
+    <div class="card"><h3>Robustheit</h3>Retries + Fallback-Modellkette (429/503), Schema-Validierung, Flyertext = Daten (Prompt-Injection-Schutz).</div>
   </div>
+  <div class="grid4" style="margin-top:.8em">
+    <div class="kpi"><div class="big" style="font-size:1.3em">10 Calls</div><div class="lbl">je Seite: 1 Extraktion + 9 Bildprüfungen</div></div>
+    <div class="kpi"><div class="big" style="font-size:1.3em">~40 s</div><div class="lbl">live je Seite; Seiten parallelisierbar</div></div>
+    <div class="kpi"><div class="big" style="font-size:1.3em">~40 k</div><div class="lbl">Tokens je Seite ≈ 1–2 Cent (Flash-Klasse)</div></div>
+    <div class="kpi"><div class="big" style="font-size:1.3em">0,6 s</div><div class="lbl">Replay – offline, deterministisch</div></div>
+  </div>
+  <aside class="notes">Nur Stufe 2 und 5 rufen ein Modell auf; alles andere ist deterministischer Code. Record/Replay macht die Pipeline testbar wie normale Software.</aside>
 </section>
 
-<!-- 10 TECHNOLOGIE -->
+<!-- 9 TECHNOLOGIE -->
 <section>
   <div class="kicker"><span class="q">Q1</span>Technologieentscheidung</div>
-  <h2>Gemini als Standard, Azure OpenAI gleichwertig anschließbar – entschieden per Messung</h2>
-  <div class="grid2" style="grid-template-columns:1.15fr .85fr;margin-top:.5em">
+  <h2>Gemini per Spike am echten Flyer validiert – Azure OpenAI über denselben Port anschließbar</h2>
+  <div class="grid2" style="grid-template-columns:1.12fr .88fr;margin-top:.5em">
+    <div>
     <table class="t">
-      <tr><th>Kriterium</th><th>Gemini (Vertex AI)</th><th>Azure OpenAI</th><th>OCR + Heuristik</th></tr>
+      <tr><th>Kriterium</th><th>Gemini</th><th>Azure OpenAI</th><th>OCR + Heuristik</th></tr>
       <tr><td>Visuelle Verortung (Boxen)</td><td class="check">nativ</td><td>eingeschränkt</td><td class="check">exakt (Wörter)</td></tr>
       <tr><td>Angebote gruppieren</td><td class="check">semantisch</td><td class="check">semantisch</td><td class="cross">viel Eigencode</td></tr>
       <tr><td>Strukturierte Ausgabe</td><td class="check">JSON-Schema</td><td class="check">strict schema</td><td>–</td></tr>
-      <tr><td>EU-Region / kein Training</td><td class="check">ja</td><td class="check">ja</td><td class="check">ja</td></tr>
-      <tr><td>Kosten je Seite</td><td class="check">sehr gering (Flash)</td><td>gering</td><td>gering</td></tr>
-      <tr><td><b>Rolle</b></td><td><b>Standard</b></td><td><b>Alternative</b></td><td><b>Gegenprobe (Prod)</b></td></tr>
+      <tr><td>EU-Region / kein Training</td><td class="check">ja (Vertex AI)</td><td class="check">ja</td><td class="check">ja</td></tr>
+      <tr><td>Kosten je Seite</td><td class="check">gering (Flash)</td><td>gering</td><td>gering</td></tr>
+      <tr><td>Status im PoC</td><td><span class="tag s-pass">live gemessen</span></td><td><span class="tag t-code">Adapter, offline getestet</span></td><td><span class="tag s-ne">Zielbild</span></td></tr>
+      <tr><td><b>Rolle</b></td><td><b>Standard</b></td><td><b>Alternative</b></td><td><b>Gegenprobe</b></td></tr>
     </table>
+    <p class="small" style="margin-top:8px">Umschalten per Konfiguration (<span class="mono">LLM_PROVIDER</span>) – gleicher Vertrag, gleiche Regeln, gleiches Eval-Gate.</p>
+    </div>
     <div>
       <div class="card"><h3>Spike am echten Flyer (09.10.2026)</h3>
         <table class="t" style="font-size:1em">
-          <tr><td class="mono">gemini-3.5-flash</td><td><span class="tag s-pass">✓</span> 16 s · 9/9 Angebote exakt</td></tr>
+          <tr><td class="mono">gemini-3.5-flash</td><td><span class="tag s-pass">✓</span> 9/9 Angebote exakt</td></tr>
           <tr><td class="mono">gemini-3.8-flash</td><td><span class="tag s-fail">503</span> überlastet</td></tr>
           <tr><td class="mono">gemini-3.1-pro</td><td><span class="tag s-fail">429</span> kein Kontingent</td></tr>
           <tr><td class="mono">gemini-2.5-pro</td><td><span class="tag s-ne">404</span> abgekündigt</td></tr>
         </table>
-        <p style="margin-top:6px">⇒ <b>Fallback-Kette + Retries</b> sind Pflicht; Modelle sind versioniert und per Golden Set vergleichbar.</p></div>
+        <p style="margin-top:8px"><b>Robustheit im Ernstfall:</b> Beim Aufzeichnen kamen 429/503 – die Fallback-Kette sprang auf <span class="mono">gemini-3.1-flash-lite</span>. Genau dieses Modell lieferte den <b>Aubergine-Befund</b> (V-01).</p>
+        <p style="margin-top:6px">⇒ Fallback-Kette + Retries sind Pflicht; Modelle werden versioniert und per Golden Set verglichen.</p></div>
     </div>
   </div>
+  <aside class="notes">Die Wahl ist eine Messung, kein Glaubensbekenntnis. Verfügbarkeit ist das reale Risiko – drei von vier Modellen waren am Testtag nicht nutzbar. Der Aubergine-Befund kam sogar vom Fallback-Modell; Azure ist als Adapter gebaut, aber nicht live gemessen.</aside>
 </section>
 
-<!-- 11 DATENMODELL -->
+<!-- 10 PRÜFKATALOG -->
 <section>
-  <div class="kicker"><span class="q">Q1</span>Kanonisches Daten- &amp; Evidenzmodell</div>
+  <div class="kicker"><span class="q">Q2</span>Umsetzung der Prüfungen</div>
+  <h2>13 Prüfungen in einem versionierten Katalog – jede mit Formel, Statuslogik und Test</h2>
+  <table class="t" style="margin-top:.3em;font-size:.58em">
+    <tr><th>ID</th><th>Prüfung</th><th>Logik</th><th>Klasse · Methode</th><th>Ergebnis Beispiel-Flyer</th></tr>
+    <tr><td><b>R-01</b></td><td>Grundpreis korrekt</td><td>Preis ÷ Menge (kg/l), Toleranz ±0,01 €</td><td>E-03 <span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Pizza</span><span class="tag s-pass">3× ok</span></td></tr>
+    <tr><td><b>R-02</b></td><td>Rabatt nicht überhöht</td><td>beworben ≤ (Streichpreis − Preis) / Streichpreis</td><td>E-03 <span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Pizza −42 %</span><span class="tag s-pass">3× ok</span></td></tr>
+    <tr><td><b>R-02b</b></td><td>Rundung einheitlich</td><td>ab- vs. aufgerundet im Dokument</td><td>E-03 <span class="tag t-code">Regel</span></td><td><span class="tag s-nr">Prüfen: gemischt</span></td></tr>
+    <tr><td><b>R-03</b></td><td>Pfand plausibel</td><td>Anzahl × 0,25 € bei PET/Dose</td><td>E-08 <span class="tag t-code">Regel</span></td><td><span class="tag s-pass">Wasser 1,50 €</span></td></tr>
+    <tr><td><b>R-04</b></td><td>Grundpreis vorhanden</td><td>PAngV: Pflicht bei Fertigpackungen</td><td>E-08 <span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Lachs</span><span class="tag s-fail">Schokolade</span><span class="tag s-nr">Toilettenpapier</span></td></tr>
+    <tr><td><b>R-05</b></td><td>Wochentag ↔ Datum</td><td>Kalenderlogik je Kampagnenjahr</td><td>E-06 <span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Mo 07.10.2026 = Mi</span></td></tr>
+    <tr><td><b>R-06/07</b></td><td>Pflichtfelder · Seitenverweise</td><td>Name/Preis/Menge · Seite ≤ Seitenzahl</td><td>E-08 · E-09 <span class="tag t-code">Regel</span></td><td><span class="tag s-fail">„Seite 6“</span></td></tr>
+    <tr><td><b>R-08</b></td><td>Preis vs. Stammdaten</td><td>Abgleich mit PIM über CSV-Adapter</td><td>E-02 <span class="tag t-ref">Referenz</span></td><td><span class="tag s-ne">ohne PIM</span> → <span class="tag s-fail">Pizza 1,69 ≠ 1,79</span></td></tr>
+    <tr><td><b>R-09/10</b></td><td>Layout-Zuordnung · Dubletten</td><td>Box-Geometrie (IoU) · gleiche Ware, anderer Preis</td><td>E-05 · E-09 <span class="tag t-code">Geometrie</span></td><td><span class="tag s-pass">ok</span></td></tr>
+    <tr><td><b>V-01</b></td><td>Bild ↔ Produkt</td><td>optional zweistufig: „blind beschreiben → abgleichen“</td><td>E-01 <span class="tag t-llm">KI-Vision</span></td><td><span class="tag s-fail">Aubergine</span><span class="tag s-pass">8× ok</span></td></tr>
+    <tr><td><b>V-02</b></td><td>Werbeaussagen-Register</td><td>„regional“, „ASC“, „100 % Arabica“ erfassen</td><td>E-07 <span class="tag t-ref">Referenz</span></td><td><span class="tag s-ne">9× nicht prüfbar</span> (keine Zertifikatsquelle)</td></tr>
+  </table>
+  <p class="small" style="margin-top:10px">Jede Regel: eigenes Modul · Version (z. B. <span class="mono">R-01@1.0</span>) · Unit-Tests mit Grenzfällen · Rückverfolgung Anforderung → Regel → Test · dokumentiert in <span class="mono">docs/design/rules-catalog.md</span></p>
+  <aside class="notes">Jede Prüfung ist ein kleines, versioniertes Modul mit eigener Formel und eigenen Tests. Wichtig ist die ehrliche Spalte rechts: V-02 registriert Werbeaussagen, kann sie aber ohne Zertifikatsquelle nicht bestätigen.</aside>
+</section>
+
+<!-- 11 PoC ERGEBNIS -->
+<section>
+  <div class="kicker">Ergebnisse des Proof of Concept</div>
+  <h2>Der PoC findet alle 9 Soll-Befunde – ohne Fehlalarm, mit Evidenz</h2>
+  <div class="grid2" style="grid-template-columns:1.15fr .85fr;margin-top:.4em;align-items:start">
+    <div>
+      <a href="demo/report-ohne-stammdaten.html" target="_blank" style="display:block"><img src="assets/report.jpg" alt="FlyerCheck-Bericht ohne Stammdaten" style="width:100%;height:470px;object-fit:cover;object-position:top left;margin:0;border-radius:10px;border:1px solid var(--line);box-shadow:0 8px 30px rgba(15,23,42,.15)"></a>
+      <p class="tiny" style="margin-top:4px">Bericht des Standardlaufs (ohne Stammdaten) – Klick öffnet die interaktive Version</p>
+    </div>
+    <div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <div class="donut"><div><div class="big" style="font-size:1.5em">54</div><div class="tiny">Prüfungen</div></div></div>
+        <div class="legend"><i style="background:var(--red)"></i><b>7</b> Fehler<br><i style="background:var(--amber)"></i><b>2</b> Prüfen<br><i style="background:var(--grey)"></i><b>10</b> nicht prüfbar<br><span style="margin-left:17px;color:var(--mute)">1 × R-08 · 9 × V-02</span><br><i style="background:var(--green2)"></i><b>35</b> ok</div>
+      </div>
+      <div class="grid2" style="gap:10px;margin-top:12px">
+        <div class="kpi"><div class="big" style="font-size:1.7em">1,00</div><div class="lbl">Precision &amp; Recall vs. Golden Set (9/9)</div></div>
+        <div class="kpi"><div class="big" style="font-size:1.7em">9/9</div><div class="lbl">Angebote exakt extrahiert</div></div>
+      </div>
+      <div class="card a" style="margin-top:10px">Mit simulierter CSV-Referenz: <b>+1 Fehler</b> (R-08 Pizza 1,69 € vs. freigegeben 1,79 €) → 8 / 2 / 9 / 43 · Golden 10/10</div>
+      <p class="small" style="margin-top:8px">Einschränkung: <b>ein</b> synthetischer Flyer = Funktionsnachweis, keine Genauigkeitsaussage → Mutationstests (Folie 13) und Pilot.</p>
+      <p class="small">▶ <a href="demo/report-ohne-stammdaten.html" target="_blank">Bericht ohne</a> · <a href="demo/report.html" target="_blank">mit Stammdaten</a></p>
+    </div>
+  </div>
+  <aside class="notes">Standardlauf ohne Stammdaten: 54 Prüfungen, alle neun Soll-Befunde gefunden, kein Fehlalarm. Die zehn „nicht prüfbar“ sind gewollt – sie zeigen, wo Referenzdaten fehlen, statt still zu bestehen.</aside>
+</section>
+
+<!-- 12 STAMMDATEN / ROOT CAUSE -->
+<section>
+  <div class="kicker">Ergebnisse · Stammdaten-Abgleich</div>
+  <h2>Mit Stammdaten wird aus drei Symptomen eine Ursache: Preis geändert, Folgefelder nicht</h2>
+  <div class="grid2" style="grid-template-columns:290px 1fr;gap:26px;margin-top:.5em;align-items:start">
+    <div>
+      <div class="crop" style="width:290px;height:275px">
+        <img src="assets/flyer.jpg" alt="Ausschnitt Pizza-Angebot" style="width:939px;left:-636px;top:-537px">
+      </div>
+      <div class="card a" style="margin-top:12px"><b>PIM-Stellvertreter</b> <span class="mono">designer_prices.csv</span> (synthetisch)<br>SKU 100006 · Preis <b>1,79 €</b> · Streichpreis 2,89 € · 320 g</div>
+    </div>
+    <div>
+      <div class="chain">
+        <div class="lnk" style="border-color:#d97706;background:var(--amberbg)"><div class="ic" style="background:var(--amber)">?</div><div><b>Ursache (Hypothese):</b> Freigegebener Preis <span class="pill">1,79 €</span> wurde im Layout auf <span class="pill">1,69 €</span> geändert – abhängige Felder nicht nachgezogen</div></div>
+        <div class="dn">▼ erklärt</div>
+        <div class="lnk"><div class="ic" style="background:var(--red)">R-08</div><div><b>Preis ≠ Stammdaten:</b> gedruckt 1,69 € ≠ freigegeben 1,79 € <span class="tag s-fail">neu</span></div></div>
+        <div class="lnk"><div class="ic" style="background:var(--red)">R-01</div><div><b>Grundpreis falsch:</b> gedruckt 5,59 €/kg = <b>1,79 € / 0,32 kg</b> → stammt noch vom alten Preis</div></div>
+        <div class="lnk"><div class="ic" style="background:var(--red)">R-02</div><div><b>Rabatt überhöht:</b> −42 % beworben; real 41,5 % (bei 1,69 €) bzw. 38,1 % (bei 1,79 €)</div></div>
+      </div>
+      <div class="grid4" style="margin-top:12px;gap:8px">
+        <div class="kpi" style="padding:7px 10px"><div class="big" style="font-size:1.25em;color:var(--red)">8</div><div class="lbl">Fehler (+1)</div></div>
+        <div class="kpi" style="padding:7px 10px"><div class="big" style="font-size:1.25em;color:var(--amber)">2</div><div class="lbl">Prüfen</div></div>
+        <div class="kpi" style="padding:7px 10px"><div class="big" style="font-size:1.25em;color:var(--grey)">9</div><div class="lbl">nicht prüfbar (−1)</div></div>
+        <div class="kpi" style="padding:7px 10px"><div class="big" style="font-size:1.25em">10/10</div><div class="lbl">Golden mit Referenz, P = R = 1,00</div></div>
+      </div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:10px">Botschaft: Interne Konsistenz findet Symptome – erst autoritative Referenzdaten liefern die <b>Ursache</b>. Daher ist die PIM-Anbindung der größte Hebel der Roadmap.</p>
+  <aside class="notes">Das ist für mich der stärkste Befund: Mit der Stammdaten-CSV erklärt sich, warum 5,59 €/kg gedruckt ist – das ist exakt der Grundpreis des freigegebenen Preises 1,79 €. Jemand hat den Preis geändert, aber Grundpreis und Rabatt nicht nachgezogen. Drei Befunde, eine Ursache, eine Korrektur.</aside>
+</section>
+
+<!-- 13 QUALITÄTSSICHERUNG -->
+<section>
+  <div class="kicker"><span class="q">Q2</span>Qualitätssicherung &amp; Evaluation</div>
+  <h2>Mutationstests messen, was ein Flyer allein nicht kann – und decken einen echten blinden Fleck auf</h2>
+  <div class="grid2" style="grid-template-columns:1fr 1fr;gap:26px;margin-top:.4em">
+    <div>
+      <h3 style="font-size:.66em">Recall je Fehler-Operator · 41 künstlich eingesetzte Defekte</h3>
+      <div class="mbars">
+        <div class="mrow hl"><span>M1 Preis geändert</span><div class="bar"><i style="width:71.4%"></i></div><span class="v">5/7 · 71 %</span></div>
+        <div class="mrow"><span>M2 Grundpreis-Tippfehler</span><div class="bar"><i style="width:100%"></i></div><span class="v">7/7</span></div>
+        <div class="mrow"><span>M3 Rabatt überhöht</span><div class="bar"><i style="width:100%"></i></div><span class="v">4/4</span></div>
+        <div class="mrow"><span>M4 Grundpreis gelöscht</span><div class="bar"><i style="width:100%"></i></div><span class="v">5/5</span></div>
+        <div class="mrow"><span>M5 Pfand falsch</span><div class="bar"><i style="width:100%"></i></div><span class="v">1/1</span></div>
+        <div class="mrow"><span>M6 Wochentag verschoben</span><div class="bar"><i style="width:100%"></i></div><span class="v">2/2</span></div>
+        <div class="mrow"><span>M7 Seitenverweis ins Leere</span><div class="bar"><i style="width:100%"></i></div><span class="v">1/1</span></div>
+        <div class="mrow"><span>M8 Preis fehlt</span><div class="bar"><i style="width:100%"></i></div><span class="v">9/9</span></div>
+        <div class="mrow"><span>M9 Einheit vertauscht</span><div class="bar"><i style="width:100%"></i></div><span class="v">5/5</span></div>
+        <div class="mrow tot"><span>Gesamt</span><div class="bar"><i style="width:95.1%"></i></div><span class="v">39/41 · 95 %</span></div>
+      </div>
+      <p class="small" style="margin-top:6px"><b>0</b> Kollateral-Fehlalarme · Golden Set 9/9 · Status-Übereinstimmung 1,00</p>
+    </div>
+    <div>
+      <div class="card a">
+        <h3>Die 2 Fehlschläge – ehrlich analysiert</h3>
+        <table class="t" style="font-size:1em;margin:4px 0">
+          <tr><th>Angebot</th><th>Preis</th><th>Grundpreis</th></tr>
+          <tr><td>Wasser 9 l</td><td>3,99 → 4,09</td><td>0,44 → 0,45 €/l</td></tr>
+          <tr><td>Toilettenpapier 1200 Bl.</td><td>2,79 → 2,89</td><td>0,23 → 0,24 €/100 Bl.</td></tr>
+        </table>
+        R-01 toleriert <b>±0,01 €</b>. Bei Großpackungen verschiebt ein Preisfehler von +0,10 € den Grundpreis nur um ~1 Cent → unter der Schwelle.
+        <p style="margin-top:6px"><b>Lehre:</b> Toleranz muss <b>relativ bzw. policy-basiert</b> sein – und R-08 (Stammdaten) fängt den Fall unabhängig davon.</p>
+      </div>
+      <div class="flow" style="margin-top:12px;font-size:.5em">
+        <div class="st"><b>Golden Set</b>Soll-Befunde</div><div class="ar">›</div>
+        <div class="st"><b>Mutation</b>9 Operatoren</div><div class="ar">›</div>
+        <div class="st"><b>Replay</b>deterministisch</div><div class="ar">›</div>
+        <div class="st" style="background:var(--greenbg)"><b>Eval-Gate</b>blockiert CI</div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">Ein Flyer beweist Funktion, keine Genauigkeit. Darum setzen wir gezielt Fehler in eine reparierte Version ein und messen. 95 % Recall – und die zwei Ausreißer sind kein Zufall, sondern ein echter Konstruktionsfehler der absoluten Toleranz. Genau dafür ist die Methode da.</aside>
+</section>
+
+<!-- 14 BETRIEB -->
+<section>
+  <div class="kicker"><span class="q">Q2</span>Produktive Bereitstellung &amp; Dokumentation</div>
+  <h2>Ein Container, serverless betrieben – der PoC läuft heute, das Zielbild ist klar abgegrenzt</h2>
+  <div style="display:grid;grid-template-columns:1fr 24px 1.15fr 24px 1.15fr 24px 1fr;gap:6px;align-items:center;margin-top:.5em">
+    <div class="box">Upload / DTP-Hook<span class="sub">CLI · API-Upload</span></div><div class="axis">➜</div>
+    <div class="box">REST-API (FastAPI)<span class="sub">Upload · Befunde · Review</span></div><div class="axis">➜</div>
+    <div class="box ziel">Queue ➜ Worker-Job <span class="zl">Zielbild</span><span class="sub">Pub/Sub · Cloud Run Jobs</span></div><div class="axis">➜</div>
+    <div class="box">LLM-Endpunkt<span class="sub">PoC: Gemini Developer API</span></div>
+  </div>
+  <table class="t" style="margin-top:12px;font-size:.6em">
+    <tr><th>Baustein</th><th>PoC (heute)</th><th>Zielbild Google Cloud</th><th>Zielbild Azure</th></tr>
+    <tr><td>Compute</td><td>Docker-Image, lokal / Cloud Run (Notizen)</td><td>Cloud Run Service + Jobs</td><td>Container Apps (+ Jobs)</td></tr>
+    <tr><td>LLM</td><td>Gemini Developer API (EU-Residenz erst mit Vertex)</td><td>Vertex AI Gemini · europe-west3</td><td>Azure OpenAI · EU-Region</td></tr>
+    <tr><td>Daten</td><td>Datei-Store (JSON, HTML-Bericht)</td><td>Cloud Storage · PostgreSQL (Audit)</td><td>Blob Storage · PostgreSQL</td></tr>
+    <tr><td>Queue · Secrets</td><td>– · Umgebungsvariable</td><td>Pub/Sub · Secret Manager</td><td>Service Bus · Key Vault</td></tr>
+  </table>
+  <div class="grid4" style="margin-top:12px">
+    <div class="card"><h3>Sicherheit</h3>EU-Region, private Endpunkte, Rollen (Reviewer/Admin), Löschfristen.</div>
+    <div class="card"><h3>Skalierung</h3>Parallelisierung je Seite, Cache je Seiten-Hash, scale-to-zero.</div>
+    <div class="card"><h3>Verfügbarkeit</h3>Retries, Fallback-Modelle, idempotente Jobs, Replay als Notfallpfad.</div>
+    <div class="card"><h3>Doku &amp; CI</h3>Docs-as-Code + 8 ADRs im Repo · CI: Lint → Tests → Replay → Eval-Gate (Anhang).</div>
+  </div>
+  <aside class="notes">Ein modularer Monolith in einem Container – bewusst einfach. Heute läuft er lokal bzw. als Image; das Zielbild mit Queue, Datenbank und Vertex AI in der EU ist gestrichelt markiert. Dokumentation und ADRs liegen im selben Repo und werden mit dem Code reviewt.</aside>
+</section>
+
+<!-- 15 RISIKEN -->
+<section>
+  <div class="kicker"><span class="q">Q3</span>Technische Risiken</div>
+  <h2>Die größten Risiken liegen in der Wahrnehmung – die Architektur fängt sie ab</h2>
+  <div class="grid2" style="grid-template-columns:.92fr 1.08fr;margin-top:.4em">
+    <div class="matrix">
+      <div class="axis vert">Auswirkung →</div>
+      <div class="c" style="background:#fef9c3"><span class="chip">R7 Prompt-Injection</span></div>
+      <div class="c" style="background:#fed7aa"><span class="chip">R6 Datenschutz</span><span class="chip">R5 keine Stammdaten</span></div>
+      <div class="c" style="background:#fecaca"><span class="chip">R1 Zahl falsch gelesen</span><span class="chip">R2 falsche Zuordnung</span><span class="chip">R4 Scheinsicherheit</span></div>
+      <div></div>
+      <div class="c" style="background:#ecfccb"><span class="chip">R11 Kosten/Latenz</span></div>
+      <div class="c" style="background:#fef9c3"><span class="chip">R9 Policy-Abhängigkeit</span><span class="chip">R12 Bildgrenzen</span></div>
+      <div class="c" style="background:#fed7aa"><span class="chip">R3 Halluzination</span><span class="chip">R8 Drift / Verfügbarkeit</span><span class="chip">R10 kleines Eval-Set</span></div>
+      <div></div>
+      <div class="c" style="background:#f0fdf4"></div><div class="c" style="background:#ecfccb"></div><div class="c" style="background:#fef9c3"></div>
+      <div></div><div class="axis" style="grid-column:2/5">Eintrittswahrscheinlichkeit →</div>
+    </div>
+    <table class="t" style="font-size:.52em">
+      <tr><th>Risiko</th><th>Gegenmaßnahme</th></tr>
+      <tr><td><b>R1</b> Zahl falsch gelesen</td><td>Wörtliche Transkription, OCR-Gegenprobe, Evidenz-Ausschnitt zur 5-s-Prüfung</td></tr>
+      <tr><td><b>R2</b> Falsche Zuordnung</td><td>Boxen je Feld, Geometrie-Regel R-09, Kachelung dichter Seiten</td></tr>
+      <tr><td><b>R3</b> Halluzination</td><td>Temperatur 0, Schema, „blind beschreiben → abgleichen“, Arithmetik nur im Code</td></tr>
+      <tr><td><b>R4</b> Scheinsicherheit</td><td>„nicht prüfbar“ sichtbar, Mensch im Prüfprozess, keine Auto-Freigabe</td></tr>
+      <tr><td><b>R5</b> Keine Stammdaten</td><td>PIM-Anbindung = Roadmap-Punkt Nr. 1 (PoC: CSV-Adapter, R-08 aktiv)</td></tr>
+      <tr><td><b>R6</b> Vertrauliche Preise</td><td>EU-Region (Vertex/Azure), Enterprise-Terms, private Endpunkte, Löschfristen</td></tr>
+      <tr><td><b>R8</b> Drift / Verfügbarkeit</td><td>Versionen pinnen, Fallback-Kette (im Spike real benötigt), Regressions-Gate</td></tr>
+      <tr><td><b>R10</b> Kleines Eval-Set</td><td>Mutationstests (95 %), Schattenbetrieb mit realen Flyern</td></tr>
+    </table>
+  </div>
+  <aside class="notes">Die kritischen Risiken liegen oben rechts: falsch gelesene Zahlen, falsche Zuordnung und Scheinsicherheit. Jedes hat eine konkrete, bereits umgesetzte oder geplante Gegenmaßnahme.</aside>
+</section>
+
+<!-- 16 GRENZEN + ORG -->
+<section>
+  <div class="kicker"><span class="q">Q3</span>Grenzen &amp; organisatorische Risiken</div>
+  <h2>Was die Lösung bewusst nicht leistet – und was organisatorisch mitgedacht werden muss</h2>
+  <div class="grid3" style="margin-top:.5em">
+    <div class="card r"><h3>Absicht erkennen</h3>Ob 1,69 € der <i>geplante</i> Preis war, weiß nur das Stammdatensystem – ohne Referenz nur interne Konsistenz.</div>
+    <div class="card r"><h3>Rechtliche Wahrheit</h3>„nachhaltig“, „regional“, „ASC“ werden registriert (V-02), ohne Zertifikatsquelle aber nicht bestätigt.</div>
+    <div class="card r"><h3>Unsichtbares &amp; Statistik</h3>Sorte/Gewicht oft nicht im Foto entscheidbar → <span class="tag s-nr">Prüfen</span>. Ein Flyer + 41 Mutanten ≠ Feldgenauigkeit.</div>
+    <div class="card a"><h3>Automation Bias &amp; Alarmmüdigkeit</h3>Zu viele Hinweise (z. B. 9× V-02) stumpfen ab → Hinweise gruppieren, nach Schweregrad sortieren, Ablehnungsquote messen.</div>
+    <div class="card a"><h3>Betriebsrat (§ 87 BetrVG)</h3>Review-Log erfasst Personenhandeln → Audit-Log zweckgebunden, Auswertung nur pseudonymisiert, Betriebsvereinbarung früh klären.</div>
+    <div class="card a"><h3>EU AI Act</h3>Kein Hochrisiko-Anwendungsfall (Assistenz, Mensch entscheidet) → Transparenz, Zweck und Modellversionen dokumentieren.</div>
+  </div>
+  <div class="card dark" style="margin-top:.9em;font-size:.64em">Konsequenz: <b>Entscheidungsunterstützung</b> mit messbarer Qualität – der Automatisierungsgrad steigt kontrolliert, sobald Precision &amp; Recall je Fehlerklasse im Pilot nachgewiesen sind. Policy-Fragen (Rundung, Grundpreis-Basis, Toleranzen) legt der Fachbereich fest.</div>
+  <aside class="notes">Die Grenzen sind Eigenschaften des Problems, keine Schwäche des PoC. Dazu kommen organisatorische Themen: Alarmmüdigkeit, Mitbestimmung und AI Act – alle lösbar, aber nur, wenn man sie früh adressiert.</aside>
+</section>
+
+<!-- 17 ROADMAP + BUSINESS CASE -->
+<section>
+  <div class="kicker">Roadmap &amp; Nutzen</div>
+  <h2>Vom PoC zur assistierten Produktion in vier Schritten – jeder mit messbarem Gate</h2>
+  <div class="grid4" style="margin-top:.5em">
+    <div class="card g"><div class="kicker">jetzt</div><h3>1 · PoC ✓</h3>Ein Flyer, alle Prüfstufen, Bericht, REST-API, CI mit Eval-Gate, Azure-Adapter.<br><b>Gate:</b> Golden Set 100 %, Mutation ≥ 95 %</div>
+    <div class="card"><div class="kicker">4–6 Wochen</div><h3>2 · Schattenbetrieb (Pilot)</h3>Parallel zur manuellen Prüfung auf 20–50 Flyern; Baseline messen; <b>PIM-Lesezugriff anbinden</b>; Toleranzen &amp; Policies festlegen.<br><b>Gate:</b> Recall kritischer Klassen ≥ 0,9</div>
+    <div class="card"><div class="kicker">Quartal</div><h3>3 · Assistierter Betrieb</h3>PIM produktiv (inkl. § 11 PAngV 30-Tage-Preis), DTP- &amp; Freigabe-Integration, Review-UI, Monitoring, OCR-Gegenprobe.<br><b>Gate:</b> Precision ≥ 0,8, Prüfzeit ↓</div>
+    <div class="card"><div class="kicker">danach</div><h3>4 · Skalierung</h3>Regionalvarianten, mehrseitige Querprüfungen, Zertifikatsquellen, Teil-Automatisierung.<br><b>Gate:</b> Kosten/Flyer im Budget</div>
+  </div>
+  <div class="card a" style="margin-top:.8em;font-size:.6em">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="margin:0">Business Case – Größenordnung</h3><span class="zl" style="font-size:13px">Annahme – im Pilot zu validieren</span></div>
+    <div class="grid4" style="margin-top:8px;gap:12px;font-size:1.05em">
+      <div><div class="big" style="font-size:1.5em;color:var(--ink)">240</div>Seiten/Woche<br><span style="color:var(--mute)">24 Seiten × 10 Regionalvarianten</span></div>
+      <div><div class="big" style="font-size:1.5em;color:var(--ink)">≈ 32 h</div>manuelle Prüfung/Woche<br><span style="color:var(--mute)">bei ~8 min je Seite</span></div>
+      <div><div class="big" style="font-size:1.5em;color:var(--green)">−50–70 %</div>Prüfzeit als Ziel<br><span style="color:var(--mute)">erst nach Baseline festlegen</span></div>
+      <div><div class="big" style="font-size:1.5em;color:var(--ink)">≈ 2–5 €</div>LLM-Kosten/Woche<br><span style="color:var(--mute)">~40 k Tokens ≈ 1–2 ct je Seite</span></div>
+    </div>
+    <p style="margin-top:8px">Zusätzlich <b>vermiedene Fehlerkosten</b>: Abmahnungen (PAngV/UWG), Kassendifferenzen, Nachdrucke – ein vermiedener Fall deckt die Betriebskosten vieler Monate.</p>
+  </div>
+  <aside class="notes">Die Zahlen im Business Case sind ausdrücklich Annahmen zur Größenordnung, keine Versprechen. Der Schattenbetrieb misst die echte Baseline – jedes Gate ist eine Go/No-Go-Entscheidung. Größter Hebel ist die PIM-Anbindung in Phase 2.</aside>
+</section>
+
+<!-- 18 FAZIT -->
+<section>
+  <div class="kicker">Fazit &amp; Entscheidungsbedarf</div>
+  <h2>Hybride KI-Prüfung ist machbar, messbar und sicher einführbar</h2>
+  <div class="grid3" style="margin-top:.6em">
+    <div class="card g"><span class="q">Q1</span><b>Architektur:</b> LLM nimmt wahr, Code prüft, Mensch entscheidet – anbieterneutral (Gemini ⇄ Azure), evidenzbasiert, serverless.</div>
+    <div class="card b"><span class="q">Q2</span><b>Umsetzung:</b> 13 versionierte Prüfungen, Golden Set 1,00 + Mutations-Recall 95 %, CI mit Eval-Gate, REST-API, Docs-as-Code mit 8 ADRs.</div>
+    <div class="card r"><span class="q">Q3</span><b>Risiken:</b> Lesefehler, Zuordnung, fehlende Stammdaten, Scheinsicherheit – adressiert durch Evidenz, Status-Semantik, Referenzdaten und den Menschen im Prüfprozess.</div>
+  </div>
+  <div class="card dark" style="margin-top:.9em;font-size:.66em">
+    <b>Entscheidung erbeten: Schattenbetrieb (Pilot) starten – 4–6 Wochen.</b> Dafür benötigt:
+    <div class="grid4" style="margin-top:8px;gap:12px;font-size:.92em">
+      <div>① 20–50 historische Flyer inkl. bekannter Fehler</div>
+      <div>② Lesezugriff PIM / Preis-DB</div>
+      <div>③ Rundungs-, Grundpreis- &amp; Toleranz-Policy mit Fachbereich</div>
+      <div>④ Cloud-Ziel (GCP oder Azure) + Datenschutz- &amp; Betriebsrats-Freigabe</div>
+    </div>
+  </div>
+  <p style="margin-top:1em;text-align:center;font-size:.9em;font-weight:700">Vielen Dank – Fragen &amp; Diskussion</p>
+  <p class="small" style="text-align:center">▶ <a href="demo/report-ohne-stammdaten.html" target="_blank">Live-Bericht</a> · <a href="demo/report.html" target="_blank">mit Stammdaten</a> · Anhang folgt</p>
+  <aside class="notes">Zusammenfassung entlang der drei Fragen und eine konkrete Bitte: einen Schattenbetrieb mit realen Flyern und Stammdatenzugriff freigeben. Danach wissen wir mit Zahlen, wie viel Automatisierung tragfähig ist.</aside>
+</section>
+
+<!-- A1 DATENMODELL -->
+<section class="appx">
+  <div class="kicker">Anhang A1 · Kanonisches Daten- &amp; Evidenzmodell</div>
   <h2>Beobachtung, Prüfung und Entscheidung bleiben getrennt – jeder Befund ist belegbar</h2>
-  <div class="grid2" style="grid-template-columns:.95fr 1.05fr;margin-top:.4em">
+  <div class="grid2" style="grid-template-columns:.9fr 1.1fr;margin-top:.4em">
     <div>
       <div class="flow" style="flex-direction:column;gap:8px;font-size:.62em">
         <div class="st" style="background:var(--violetbg)"><b>Beobachtung</b>„Flyer zeigt 1,69 € und 320 g“ – Rohwert + normalisierter Wert + Position</div>
         <div class="st" style="background:var(--greenbg)"><b>Prüfung</b>„Grundpreis weicht nach Regel R-01 ab“ – erwartet vs. beobachtet, Regelversion</div>
         <div class="st" style="background:var(--bluebg)"><b>Entscheidung</b>„Reviewer bestätigt, Korrektur angefordert“ – getrennt gespeichert, auditierbar</div>
       </div>
-      <p class="small" style="margin-top:10px"><b>5 Status:</b>
-        <span class="tag s-fail">fail</span><span class="tag s-nr">needs_review</span><span class="tag s-ne">not_evaluable</span><span class="tag s-err">error</span><span class="tag s-pass">pass</span><br>
-        <b>Schweregrad ⟂ Konfidenz</b> – nie zu einem Score vermischt.</p>
+      <p class="small" style="margin-top:10px"><b>Status:</b> <span class="tag s-fail">Fehler</span><span class="tag s-nr">Prüfen</span><span class="tag s-ne">nicht prüfbar</span><span class="tag s-err">Systemfehler</span><span class="tag s-pass">ok</span><br>
+        Schweregrad und Konfidenz getrennt · ADR-0004/0005 · Regel-Befunde tragen keine Modellversion, KI-Befunde schon.</p>
     </div>
-<pre class="json">{
-  "check_id": "R-01",  "category": "E03_arithmetic",
-  "severity": "critical", "status": "fail",
-  "summary": "Printed unit price 5.59 €/kg ≠ computed 5.28 €/kg",
-  "observed": { "price": "1.69", "quantity": "0.320 kg",
-                "unit_price": "5.59 €/kg" },
-  "expected": { "unit_price": "5.28 €/kg",
-                "formula": "1.69 € / 0.320 kg" },
-  "evidence": [{ "page": 1, "source": "flyer",
-     "bbox": [0.677, 0.381, 0.986, 0.576] }],
-  "confidence": 0.95,
-  "rule_version": "R-01@1.0",
-  "model_version": "gemini-3.5-flash · extract-v1"
+<pre class="json" style="font-size:.56em">{
+  <span class="k">"check_id"</span>: <span class="s">"R-01"</span>,
+  <span class="k">"category"</span>: <span class="s">"E03_arithmetic"</span>,
+  <span class="k">"severity"</span>: <span class="s">"critical"</span>,
+  <span class="k">"status"</span>: <span class="r">"fail"</span>,
+  <span class="k">"summary"</span>: <span class="s">"Gedruckter Grundpreis 5,59 €/kg ≠ berechnet 5,28 €/kg"</span>,
+  <span class="k">"observed"</span>: { <span class="k">"price"</span>: <span class="s">"1.69"</span>, <span class="k">"quantity"</span>: <span class="s">"0.320 kg"</span>,
+                <span class="k">"unit_price"</span>: <span class="s">"5.59 €/kg"</span> },
+  <span class="k">"expected"</span>: { <span class="k">"unit_price"</span>: <span class="s">"5.28 €/kg"</span>,
+                <span class="k">"formula"</span>: <span class="s">"1.69 € / 0.320 kg"</span> },
+  <span class="k">"evidence"</span>: [{ <span class="k">"page"</span>: 1,
+     <span class="k">"bbox"</span>: [0.677, 0.381, 0.986, 0.576] }],
+  <span class="k">"confidence"</span>: 1.0,
+  <span class="k">"rule_version"</span>: <span class="s">"R-01@1.0"</span>
 }</pre>
   </div>
+  <aside class="notes">Der kanonische Vertrag ist die Integrationsgrenze. Jeder Befund trägt erwarteten und beobachteten Wert, Formel, Position und Version – in fünf Sekunden überprüfbar.</aside>
 </section>
 
-<!-- 12 PRÜFKATALOG -->
-<section>
-  <div class="kicker"><span class="q">Q2</span>Umsetzung der Prüfungen</div>
-  <h2>Ein versionierter Prüfkatalog – jede Regel mit Formel, Statuslogik und Testfall</h2>
-  <table class="t" style="margin-top:.4em">
-    <tr><th>ID</th><th>Prüfung</th><th>Logik</th><th>Methode</th><th>Beispiel-Flyer</th></tr>
-    <tr><td><b>R-01</b></td><td>Grundpreis korrekt</td><td>Preis ÷ Menge (kg/l), kaufm. gerundet</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Pizza</span><span class="tag s-pass">3× ok</span></td></tr>
-    <tr><td><b>R-02</b></td><td>Rabatt nicht überhöht</td><td>beworben ≤ (UVP−Preis)/UVP</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Pizza −42 %</span><span class="tag s-pass">3× ok</span></td></tr>
-    <tr><td><b>R-02b</b></td><td>Rundung einheitlich</td><td>ab- vs. aufgerundet im Dokument</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-nr">gemischt</span></td></tr>
-    <tr><td><b>R-03</b></td><td>Pfand plausibel</td><td>Anzahl × 0,25 € bei PET/Dose</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-pass">Wasser 1,50 €</span></td></tr>
-    <tr><td><b>R-04</b></td><td>Grundpreis vorhanden</td><td>PAngV: Pflicht bei ≠ 1 kg/l</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Lachs</span><span class="tag s-fail">Schokolade</span><span class="tag s-nr">Toilettenpapier</span></td></tr>
-    <tr><td><b>R-05</b></td><td>Wochentag ↔ Datum</td><td>Kalenderlogik je Kampagnenjahr</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-fail">Mo 07.10.2026 = Mi</span></td></tr>
-    <tr><td><b>R-06/07</b></td><td>Pflichtfelder · Seitenverweise</td><td>Name/Preis/Menge · Seite ≤ Seitenzahl</td><td><span class="tag t-code">Regel</span></td><td><span class="tag s-fail">„Seite 6“</span></td></tr>
-    <tr><td><b>R-08</b></td><td>Preis vs. Stammdaten</td><td>Abgleich mit PIM/Preis-DB</td><td><span class="tag t-ref">Referenz</span></td><td><span class="tag s-ne">ohne PIM</span> / <span class="tag s-fail">mit CSV-PIM</span></td></tr>
-    <tr><td><b>R-09/10</b></td><td>Layout-Zuordnung · Dubletten</td><td>Box-Geometrie (IoU) · gleiche Ware, anderer Preis</td><td><span class="tag t-code">Geometrie</span></td><td><span class="tag s-pass">ok</span></td></tr>
-    <tr><td><b>V-01</b></td><td>Bild ↔ Produkt</td><td>Bildausschnitt erst „blind“ beschreiben, dann abgleichen</td><td><span class="tag t-llm">KI-Vision</span></td><td><span class="tag s-fail">Aubergine</span><span class="tag s-pass">8× ok</span></td></tr>
-    <tr><td><b>V-02</b></td><td>Werbeaussagen</td><td>„regional“, „ASC“, „100 % Arabica“ registrieren</td><td><span class="tag t-ref">Referenz</span></td><td><span class="tag s-ne">nicht prüfbar</span></td></tr>
-  </table>
-</section>
-
-<!-- 13 PoC ERGEBNIS -->
-<section>
-  <div class="kicker">Ergebnisse des Proof of Concept</div>
-  <h2>Der PoC findet alle 9 Soll-Befunde – ohne Fehlalarm, mit Evidenz im Bericht</h2>
-  <div class="grid2" style="grid-template-columns:1.25fr .75fr;margin-top:.4em;align-items:start">
-    <img src="assets/report.jpg" alt="FlyerCheck-Bericht" style="width:100%;margin:0;border-radius:10px;border:1px solid var(--line);box-shadow:0 8px 30px rgba(15,23,42,.15)">
+<!-- A2 CI/CD & DOKU -->
+<section class="appx">
+  <div class="kicker">Anhang A2 · CI/CD &amp; Dokumentation</div>
+  <h2>Jeder Commit durchläuft Tests und Eval-Gate – Docs-as-Code und ADRs machen Entscheidungen nachvollziehbar</h2>
+  <div class="grid2" style="margin-top:.4em">
     <div>
-      <div style="display:flex;gap:16px;align-items:center">
-        <div class="donut"><div><div class="big" style="font-size:1.5em">36</div><div class="tiny">Prüfungen</div></div></div>
-        <div class="legend"><i style="background:var(--red)"></i>7 fail<br><i style="background:var(--amber)"></i>2 needs_review<br><i style="background:var(--grey)"></i>1 not_evaluable<br><i style="background:var(--green2)"></i>26 pass</div>
+      <h3 style="font-size:.7em">Pipeline (GitHub Actions) – heute</h3>
+      <div class="flow" style="font-size:.48em">
+        <div class="st"><b>Lint</b>ruff</div><div class="ar">›</div><div class="st"><b>Tests</b>187 · pytest</div><div class="ar">›</div>
+        <div class="st"><b>Replay</b>Beispiel-Flyer</div><div class="ar">›</div><div class="st" style="background:var(--greenbg)"><b>Eval-Gate</b>Golden Set</div><div class="ar">›</div>
+        <div class="st"><b>Mutation</b>Eval</div><div class="ar">›</div><div class="st"><b>Bericht</b>Artefakt</div>
       </div>
-      <div class="grid2" style="gap:10px;margin-top:12px">
-        <div class="kpi"><div class="big">1,00</div><div class="lbl">Precision &amp; Recall vs. Golden Set</div></div>
-        <div class="kpi"><div class="big">9/9</div><div class="lbl">Angebote exakt extrahiert</div></div>
-        <div class="kpi"><div class="big">~40 s</div><div class="lbl">live je Seite (10 LLM-Calls)</div></div>
-        <div class="kpi"><div class="big">0,6 s</div><div class="lbl">Replay – offline &amp; deterministisch</div></div>
+      <div class="flow" style="font-size:.48em;margin-top:6px">
+        <div class="st"><b>GitHub Pages</b>diese Folien + Demo-Berichte</div><div class="ar">·</div>
+        <div class="st ziel"><b>Container-Build <span class="zl">Zielbild</span></b>Registry</div><div class="ar">›</div>
+        <div class="st ziel"><b>Deploy <span class="zl">Zielbild</span></b>Cloud Run / Container Apps</div>
       </div>
-      <p class="tiny" style="margin-top:8px">~40 k Tokens je Seite → Bruchteile eines Cents. Einschränkung: <b>ein</b> synthetischer Flyer = Funktionsnachweis, keine Genauigkeitsaussage.</p>
-      <p class="small"><a href="demo/report.html" target="_blank">▶ Interaktiven Bericht öffnen</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- 14 QUALITÄTSSICHERUNG -->
-<section>
-  <div class="kicker"><span class="q">Q2</span>Qualitätssicherung &amp; Evaluation</div>
-  <h2>Jede Änderung an Prompt, Modell oder Regel muss ein Evaluations-Gate passieren</h2>
-  <div class="flow" style="margin-top:.6em;font-size:.64em">
-    <div class="st"><b>Golden Set</b>gelabelte Flyer: Seite, Box, Prüfung, erwarteter Status</div><div class="ar">›</div>
-    <div class="st"><b>Mutationstests</b>Fehler gezielt einsetzen: Preis ändern, Grundpreis löschen, Datum verschieben …</div><div class="ar">›</div>
-    <div class="st"><b>Record → Replay</b>LLM-Antworten versioniert → reproduzierbare Läufe</div><div class="ar">›</div>
-    <div class="st" style="background:var(--greenbg)"><b>Eval-Gate in CI</b>Recall kritischer Klassen darf nicht sinken; Precision ≥ Baseline</div><div class="ar">›</div>
-    <div class="st"><b>Freigabe</b>Modellversion gepinnt, Diff manuell geprüft</div>
-  </div>
-  <div class="grid3" style="margin-top:.8em">
-    <div class="card"><h3>Metriken je Klasse</h3>Precision, Recall, Evidenz-Vollständigkeit, Anteil „nicht prüfbar“, Latenz, € je Flyer, Reviewer-Ablehnungsquote.</div>
-    <div class="card"><h3>Teststrategie</h3><b>Unit</b> (Regeln, Parser) · <b>Komponente</b> (Adapter, Mocks) · <b>Integration</b> (Pipeline im Replay) · <b>Golden-Set-Eval</b>.</div>
-    <div class="card g"><h3>Stand PoC</h3><b>150+ automatisierte Tests</b>, komplett offline · Lint &amp; Tests &amp; Replay &amp; Eval-Gate in CI.</div>
-  </div>
-</section>
-
-<!-- 15 BETRIEB -->
-<section>
-  <div class="kicker"><span class="q">Q2</span>Produktive Bereitstellung</div>
-  <h2>Ein Container, serverless betrieben – skaliert auf null zwischen den Wochenläufen</h2>
-  <div style="display:grid;grid-template-columns:1fr 26px 1.1fr 26px 1.2fr 26px 1fr;gap:6px;align-items:center;margin-top:.6em">
-    <div class="box">Upload / DTP-Hook<br><span class="tiny">Cloud Storage-Trigger</span></div><div class="axis">➜</div>
-    <div class="box">API<br><span class="tiny">Cloud Run · REST · Review</span></div><div class="axis">➜</div>
-    <div class="box" style="border-color:var(--green)">Queue ➜ Worker-Job<br><span class="tiny">Pub/Sub · Cloud Run Jobs · gleiches Paket</span></div><div class="axis">➜</div>
-    <div class="box ext">Vertex AI Gemini<br><span class="tiny">europe-west3</span></div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px">
-    <div class="box ext">Cloud Storage<br><span class="tiny">Quelle, Renderings, Evidenz</span></div>
-    <div class="box ext">PostgreSQL<br><span class="tiny">Läufe, Befunde, Entscheidungen, Audit</span></div>
-    <div class="box ext">Secret Manager · IAM<br><span class="tiny">keine Schlüssel im Code</span></div>
-    <div class="box ext">Monitoring<br><span class="tiny">Traces, Kosten, Qualitäts-Drift</span></div>
-  </div>
-  <div class="grid4" style="margin-top:.8em">
-    <div class="card"><h3>Sicherheit</h3>EU-Region, private Endpunkte, Rollen (Reviewer/Admin), Aufbewahrungsfristen.</div>
-    <div class="card"><h3>Skalierung</h3>Seiten-Fan-out, parallele LLM-Calls, Cache je Seiten-Hash.</div>
-    <div class="card"><h3>Verfügbarkeit</h3>Retries, Fallback-Modelle, idempotente Jobs, Replay als Notfallpfad.</div>
-    <div class="card"><h3>Azure-Äquivalent</h3>Container Apps, Service Bus, Blob, Azure OpenAI, Key Vault.</div>
-  </div>
-</section>
-
-<!-- 16 CI/CD & DOKU -->
-<section>
-  <div class="kicker"><span class="q">Q2</span>CI/CD &amp; Dokumentation</div>
-  <h2>Docs-as-Code und ADRs machen Entscheidungen nachvollziehbar – für Menschen und Coding-Agenten</h2>
-  <div class="grid2" style="margin-top:.5em">
-    <div>
-      <h3 style="font-size:.75em">Pipeline (GitHub Actions)</h3>
-      <div class="flow" style="font-size:.56em">
-        <div class="st">Lint</div><div class="ar">›</div><div class="st">Tests</div><div class="ar">›</div>
-        <div class="st">Replay-Lauf</div><div class="ar">›</div><div class="st" style="background:var(--greenbg)">Eval-Gate</div><div class="ar">›</div>
-        <div class="st">Container</div><div class="ar">›</div><div class="st">Deploy + Pages</div>
-      </div>
-      <h3 style="font-size:.75em;margin-top:14px">Architekturentscheidungen (ADR)</h3>
-      <table class="t"><tr><td>0001</td><td>Hybrid: Regeln + LLM nur für Wahrnehmung</td></tr>
+      <h3 style="font-size:.7em;margin-top:12px">Architekturentscheidungen (ADR)</h3>
+      <table class="t" style="font-size:.5em"><tr><td>0001</td><td>Hybrid: Regeln + LLM nur für Wahrnehmung</td></tr>
       <tr><td>0002</td><td>Multimodale Extraktion, OCR-Gegenprobe in Prod</td></tr>
       <tr><td>0003</td><td>Anbieterneutraler LLM-Port, Gemini Standard</td></tr>
       <tr><td>0004</td><td>Kanonischer Vertrag als Integrationsgrenze</td></tr>
-      <tr><td>0005</td><td>5 Status, Schweregrad ⟂ Konfidenz</td></tr>
-      <tr><td>0006</td><td>Human-in-the-Loop, keine Auto-Freigabe</td></tr>
+      <tr><td>0005</td><td>5 Status, Schweregrad und Konfidenz getrennt</td></tr>
+      <tr><td>0006</td><td>Mensch im Prüfprozess, keine Auto-Freigabe</td></tr>
       <tr><td>0007</td><td>Modularer Monolith, serverless</td></tr>
       <tr><td>0008</td><td>Golden Set + Record/Replay-Gate</td></tr></table>
     </div>
     <div>
-      <h3 style="font-size:.75em">Dokumentation als Wissensgraph</h3>
-      <div style="display:flex;flex-direction:column;gap:7px;align-items:center;font-size:.95em">
+      <h3 style="font-size:.7em">Dokumentation als verlinkter Wissensgraph</h3>
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center">
         <div class="box" style="width:70%">Vision · Ziele · Annahmen</div><div class="tiny">▼</div>
-        <div class="box" style="width:70%">Architektur · Prinzipien · C4</div><div class="tiny">▼</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:85%"><div class="box">Domäne · Vertrag</div><div class="box" style="border-color:var(--violet)">ADRs</div></div><div class="tiny">▼</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:85%"><div class="box">Design · Prüfkatalog</div><div class="box">API</div></div><div class="tiny">▼</div>
+        <div class="box" style="width:70%">Architektur · Prinzipien · Systemkontext</div><div class="tiny">▼</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:85%"><div class="box" style="font-size:.6em">Domäne · Vertrag</div><div class="box" style="font-size:.6em;border-color:var(--violet)">8 ADRs</div></div><div class="tiny">▼</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:85%"><div class="box" style="font-size:.6em">Design · Prüfkatalog</div><div class="box" style="font-size:.6em">REST-API</div></div><div class="tiny">▼</div>
         <div class="box" style="width:70%">Betrieb · Evaluation · Risiken</div>
       </div>
-      <p class="tiny" style="margin-top:8px;text-align:center">Jede Regel → Anforderung → Modul → Test (Traceability). TOGAF ADM als leichtgewichtiger Rahmen.</p>
+      <p class="small" style="margin-top:8px;text-align:center">Anforderung → Regel → Modul → Test · TOGAF ADM als leichtgewichtiger Rahmen · Doku im selben Review wie der Code.</p>
     </div>
   </div>
+  <aside class="notes">Dokumentation ist Teil des Produkts. Die CI blockiert jede Änderung, die das Golden Set verschlechtert; Container-Build und Deploy sind Zielbild.</aside>
 </section>
 
-<!-- 17 RISIKEN -->
-<section>
-  <div class="kicker"><span class="q">Q3</span>Risiken</div>
-  <h2>Die größten Risiken liegen in der Wahrnehmung – die Architektur fängt sie ab</h2>
-  <div class="grid2" style="grid-template-columns:.95fr 1.05fr;margin-top:.4em">
-    <div class="matrix">
-      <div class="axis vert">Auswirkung →</div>
-      <div class="c" style="background:#fef9c3"><span class="chip">R7 Prompt-Injection</span></div>
-      <div class="c" style="background:#fed7aa"><span class="chip">R6 Datenschutz</span><span class="chip">R5 keine Stammdaten</span></div>
-      <div class="c" style="background:#fecaca"><span class="chip">R1 Zahlen falsch gelesen</span><span class="chip">R2 falsche Zuordnung</span><span class="chip">R4 Scheinsicherheit</span></div>
-      <div></div>
-      <div class="c" style="background:#ecfccb"><span class="chip">R11 Kosten/Latenz</span></div>
-      <div class="c" style="background:#fef9c3"><span class="chip">R9 Policy-Abhängigkeit</span><span class="chip">R12 Bildgrenzen</span></div>
-      <div class="c" style="background:#fed7aa"><span class="chip">R3 Halluzination</span><span class="chip">R8 Modell-Drift</span><span class="chip">R10 kleines Eval-Set</span></div>
-      <div></div>
-      <div class="c" style="background:#f0fdf4"></div><div class="c" style="background:#ecfccb"></div><div class="c" style="background:#fef9c3"></div>
-      <div></div><div class="axis" style="grid-column:2/5">Eintrittswahrscheinlichkeit →</div>
-    </div>
-    <table class="t">
-      <tr><th>Risiko</th><th>Gegenmaßnahme</th></tr>
-      <tr><td><b>R1</b> Zahl falsch gelesen</td><td>Wörtliche Transkription, OCR-Gegenprobe, Evidenz-Ausschnitt zur 5-s-Prüfung</td></tr>
-      <tr><td><b>R2</b> Falsche Zuordnung</td><td>Boxen je Feld, Geometrie-Regel R-09, Kachelung dichter Seiten</td></tr>
-      <tr><td><b>R4</b> Scheinsicherheit</td><td>„nicht prüfbar“ sichtbar, Human-in-the-Loop, keine Auto-Freigabe</td></tr>
-      <tr><td><b>R5</b> Keine Stammdaten</td><td>PIM-Adapter als Roadmap-Punkt Nr. 1 (im PoC per CSV simuliert)</td></tr>
-      <tr><td><b>R6</b> Vertrauliche Preise</td><td>EU-Region, Enterprise-Terms, private Endpunkte, Löschfristen</td></tr>
-      <tr><td><b>R8</b> Modell-Drift</td><td>Versionen pinnen, Fallback-Kette, Regressions-Gate</td></tr>
-      <tr><td><b>R7</b> Prompt-Injection</td><td>Flyertext = Daten, Schema-Validierung, LLM ohne Werkzeuge</td></tr>
-    </table>
-  </div>
-</section>
-
-<!-- 18 GRENZEN -->
-<section>
-  <div class="kicker"><span class="q">Q3</span>Grenzen</div>
-  <h2>Was die Lösung bewusst <u>nicht</u> leistet</h2>
-  <div class="grid3" style="margin-top:.6em">
-    <div class="card r"><h3>Absicht erkennen</h3>Ob 1,69 € der <i>geplante</i> Preis war, weiß nur das Stammdatensystem – ohne Referenz nur interne Konsistenz.</div>
-    <div class="card r"><h3>Rechtliche Wahrheit</h3>„nachhaltig“, „regional“, „ASC“ werden registriert, aber ohne Zertifikatsquelle nicht bestätigt.</div>
-    <div class="card r"><h3>Unsichtbares</h3>Sorte, Geschmack, Gewicht sind auf Fotos oft nicht entscheidbar → <span class="tag s-nr">Review</span> statt Raten.</div>
-    <div class="card a"><h3>Policy-Fragen</h3>Rundungsregel für Rabatte, Grundpreis-Basis (je Blatt/Rolle) → fachlich festlegen, dann konfigurieren.</div>
-    <div class="card a"><h3>Statistische Aussagekraft</h3>Ein Flyer belegt Funktion, nicht Genauigkeit → Pilot mit 20–50 realen Flyern + Mutationstests.</div>
-    <div class="card a"><h3>Gestaltung</h3>Ästhetik, Markenwirkung, Kreativqualität bleiben menschliche Aufgabe.</div>
-  </div>
-  <p class="small" style="margin-top:.8em">Konsequenz: <b>Entscheidungsunterstützung</b> mit messbarer Qualität – Automatisierungsgrad steigt kontrolliert, wenn Precision je Klasse nachgewiesen ist.</p>
-</section>
-
-<!-- 19 METHODIK -->
-<section>
-  <div class="kicker">Vorgehen &amp; Methodik</div>
-  <h2>Vertrag zuerst, dann parallel: Analyse, Architektur und PoC an einem Vormittag</h2>
-  <div class="grid2" style="grid-template-columns:1fr 1fr;margin-top:.4em">
+<!-- A3 METHODIK -->
+<section class="appx">
+  <div class="kicker">Anhang A3 · Vorgehen &amp; Methodik</div>
+  <h2>Vertrag zuerst, dann parallel umgesetzt – 0 Merge-Konflikte</h2>
+  <div class="grid2" style="grid-template-columns:.8fr 1.2fr;margin-top:.4em;gap:20px">
     <div>
-      <h3 style="font-size:.75em">Methodischer Rahmen</h3>
-      <div class="flow" style="flex-direction:column;gap:6px;font-size:.58em">
+      <h3 style="font-size:.7em">Methodischer Rahmen</h3>
+      <div class="flow" style="flex-direction:column;gap:6px;font-size:.56em">
         <div class="st"><b>Verstehen</b>Aufgabe zerlegen, Fehlertaxonomie, Flyer nachrechnen, Annahmen explizit</div>
-        <div class="st"><b>Entscheiden</b>Prinzipien + 8 ADRs, TOGAF ADM leichtgewichtig (Vision → B/C/D → Migration)</div>
-        <div class="st"><b>Risiko früh senken</b>Live-Spike mit 4 Modellen am echten Flyer vor jeder Architekturfestlegung</div>
-        <div class="st"><b>Messen</b>Golden Set aus der Analyse = Abnahmekriterium für den Code</div>
+        <div class="st"><b>Entscheiden</b>Prinzipien + 8 ADRs, TOGAF ADM leichtgewichtig</div>
+        <div class="st"><b>Risiko früh senken</b>Live-Spike mit 4 Modellen am echten Flyer vor der Architekturfestlegung</div>
+        <div class="st"><b>Messen</b>Golden Set = Abnahmekriterium; Mutationstests für Generalisierung</div>
       </div>
     </div>
     <div>
-      <h3 style="font-size:.75em">Umsetzung mit parallelen KI-Agenten (Git-Worktrees)</h3>
+      <h3 style="font-size:.7em">Umsetzung mit parallelen KI-Agenten in Git-Worktrees</h3>
       <div class="gantt">
-        <div class="row"><span>Phase 0 · Vertrag</span><div class="track"><div class="seg" style="left:0;width:22%;background:var(--ink)">Modell, Stubs, Fixtures</div></div></div>
-        <div class="row"><span>T1 LLM-Adapter</span><div class="track"><div class="seg" style="left:22%;width:20%;background:var(--violet)">Gemini · Replay</div></div></div>
-        <div class="row"><span>T2 Extraktion</span><div class="track"><div class="seg" style="left:22%;width:26%;background:var(--violet)">Ingest · Parser</div></div></div>
-        <div class="row"><span>T3 Regeln</span><div class="track"><div class="seg" style="left:22%;width:38%;background:var(--green)">R-01 … R-08</div></div></div>
-        <div class="row"><span>T4 Vision</span><div class="track"><div class="seg" style="left:22%;width:14%;background:var(--violet)">V-01</div></div></div>
-        <div class="row"><span>T5 Bericht/Eval</span><div class="track"><div class="seg" style="left:22%;width:26%;background:var(--blue)">HTML · Metriken</div></div></div>
-        <div class="row"><span>Integration</span><div class="track"><div class="seg" style="left:62%;width:20%;background:var(--ink)">Merge · Record · Eval</div></div></div>
-        <div class="row"><span>Phase 3 · 7 Tracks</span><div class="track"><div class="seg" style="left:82%;width:18%;background:var(--amber)">Ausbau</div></div></div>
+        <div class="row"><span><b>Phase 0</b> Vertrag</span><div class="track"><div class="seg" style="left:0;width:14%;background:var(--ink)">~7 min</div></div></div>
+        <div class="row"><span>T1 LLM-Adapter</span><div class="track"><div class="seg" style="left:14%;width:16%;background:var(--violet)">Gemini</div></div></div>
+        <div class="row"><span>T2 Extraktion</span><div class="track"><div class="seg" style="left:14%;width:18%;background:var(--violet)">Parser</div></div></div>
+        <div class="row"><span>T3 Regeln</span><div class="track"><div class="seg" style="left:14%;width:22%;background:var(--green)">R-01 … R-07</div></div></div>
+        <div class="row"><span>T4 Bildprüfung</span><div class="track"><div class="seg" style="left:14%;width:12%;background:var(--violet)">V-01</div></div></div>
+        <div class="row"><span>T5 Bericht/Eval</span><div class="track"><div class="seg" style="left:14%;width:18%;background:var(--blue)">HTML</div></div></div>
+        <div class="row"><span><b>Integration</b></span><div class="track"><div class="seg" style="left:37%;width:15%;background:var(--ink)">Merge</div></div></div>
+        <div class="row"><span><b>Phase 3</b> 7 Tracks</span><div class="track"><div class="seg" style="left:53%;width:47%;background:var(--amber)">parallel → Integration</div></div></div>
       </div>
-      <p class="tiny" style="margin-top:6px">Disjunkter Dateibesitz je Track ⇒ <b>0 Merge-Konflikte</b>. Fixtures entkoppeln die Tracks voneinander.</p>
+      <div class="trk" style="margin-top:8px">
+        <div><b>Claims</b>V-02, 2-stufig</div>
+        <div><b>Mutation</b>9 Operatoren</div>
+        <div><b>REST-API</b>FastAPI</div>
+        <div><b>Azure</b>Adapter</div>
+        <div><b>Layout</b>R-09/R-10</div>
+        <div><b>Ops/CI</b>Docker</div>
+        <div><b>Stamm&shy;daten</b>R-08</div>
+      </div>
+      <p class="small" style="margin-top:6px">Disjunkter Dateibesitz je Track + gemeinsamer Vertrag + Fixtures ⇒ <b>0 Merge-Konflikte</b>. Mensch = Architekt &amp; Reviewer, Agenten = Implementierung.</p>
     </div>
   </div>
+  <aside class="notes">Contract-first: Erst den Datenvertrag festlegen, dann bauen fünf und später sieben Agenten parallel, ohne sich zu blockieren. Ich war Architekt und Reviewer.</aside>
 </section>
 
-<!-- 20 ROADMAP -->
-<section>
-  <div class="kicker">Roadmap &amp; Nutzen</div>
-  <h2>Vom PoC zur assistierten Produktion in vier messbaren Schritten</h2>
+<!-- A4 LINKS -->
+<section class="appx">
+  <div class="kicker">Anhang A4 · Code, Doku, Demo</div>
+  <h2>Alles nachvollziehbar und offline reproduzierbar – ohne API-Schlüssel</h2>
   <div class="grid4" style="margin-top:.6em">
-    <div class="card g"><div class="kicker">jetzt</div><h3>1 · PoC</h3>Ein Flyer, alle Prüfstufen, Bericht, API, CI/CD.<br><b>Gate:</b> Golden Set 100 %</div>
-    <div class="card"><div class="kicker">4–6 Wochen</div><h3>2 · Shadow-Pilot</h3>Parallel zur manuellen Prüfung auf 20–50 Flyern; Baseline messen; Regeln mit Fachbereich schärfen.<br><b>Gate:</b> Recall kritischer Klassen ≥ 0,9</div>
-    <div class="card"><div class="kicker">Quartal</div><h3>3 · Assistierter Betrieb</h3>Integration DTP + Freigabe-Workflow, Review-UI, Monitoring, OCR-Gegenprobe.<br><b>Gate:</b> Precision ≥ 0,8, Prüfzeit ↓</div>
-    <div class="card"><div class="kicker">danach</div><h3>4 · Skalierung</h3>PIM-/Preis-DB-Anbindung, Regionalvarianten, mehrseitige Querprüfungen, Teil-Automatisierung.<br><b>Gate:</b> Kosten/Flyer im Budget</div>
+    <div class="card"><h3>▶ Bericht ohne Stammdaten</h3><a href="demo/report-ohne-stammdaten.html" target="_blank">Standardlauf</a><br>7 Fehler · 2 Prüfen · 10 nicht prüfbar · 35 ok</div>
+    <div class="card g"><h3>▶ Bericht mit Stammdaten</h3><a href="demo/report.html" target="_blank">mit CSV-Referenz</a><br>8 Fehler · 2 Prüfen · 9 nicht prüfbar · 43 ok</div>
+    <div class="card"><h3>Quellcode</h3><a href="https://github.com/werder11/fbeta_angebotsflyer_analyzer_ki" target="_blank">GitHub-Repository</a></div>
+    <div class="card"><h3>Architektur-Doku</h3><a href="https://github.com/werder11/fbeta_angebotsflyer_analyzer_ki/tree/dev/docs" target="_blank">docs/ – Vision, Architektur, ADRs, Prüfkatalog, Risiken</a></div>
   </div>
-  <div class="grid3" style="margin-top:.8em">
-    <div class="kpi"><div class="big" style="font-size:1.4em">Prüfzeit ↓</div><div class="lbl">Reviewer bewerten Auffälligkeiten statt Volltext (Ziel nach Baseline festlegen)</div></div>
-    <div class="kpi"><div class="big" style="font-size:1.4em">Fehler ↓</div><div class="lbl">Rechen- &amp; Pflichtangabenfehler systematisch statt stichprobenartig</div></div>
-    <div class="kpi"><div class="big" style="font-size:1.4em">Audit ✓</div><div class="lbl">Jede Freigabe mit Befunden, Versionen und Entscheidungen belegt</div></div>
-  </div>
-</section>
-
-<!-- 21 FAZIT -->
-<section>
-  <div class="kicker">Fazit</div>
-  <h2>Hybride KI-Prüfung ist machbar, messbar und sicher einführbar</h2>
-  <div class="grid3" style="margin-top:.6em">
-    <div class="card g"><span class="q">Q1</span><b>Architektur:</b> LLM nimmt wahr, Code prüft, Mensch entscheidet – anbieterneutral, evidenzbasiert, serverless.</div>
-    <div class="card b"><span class="q">Q2</span><b>Umsetzung:</b> versionierter Prüfkatalog, Golden Set + Mutationstests, CI mit Eval-Gate, Docs-as-Code mit ADRs.</div>
-    <div class="card r"><span class="q">Q3</span><b>Risiken:</b> Lesefehler, Zuordnung, fehlende Stammdaten, Scheinsicherheit – adressiert durch Evidenz, Status-Semantik und HITL.</div>
-  </div>
-  <div class="card" style="margin-top:.9em;font-size:.72em;background:#0f172a;color:#fff;border:0">
-    <b>Nächste Schritte:</b> ① 20–50 historische Flyer inkl. bekannter Fehler bereitstellen ② Zugang zu PIM/Preis-DB klären ③ Rundungs- und Grundpreis-Policy mit Fachbereich festlegen ④ Shadow-Pilot starten
-  </div>
-  <p class="small" style="margin-top:.9em;text-align:center">Vielen Dank – Fragen &amp; Diskussion</p>
-</section>
-
-<!-- 22 ANHANG -->
-<section>
-  <div class="kicker">Anhang</div>
-  <h2>Alles nachvollziehbar: Code, Doku, Demo</h2>
-  <div class="grid3" style="margin-top:.6em">
-    <div class="card"><h3>▶ Demo-Bericht</h3><a href="demo/report.html" target="_blank">Interaktiver Befundbericht</a> (in CI aus aufgezeichneten LLM-Antworten erzeugt)</div>
-    <div class="card"><h3>Quellcode</h3><a href="https://github.com/werder11/fbeta_angebotsflyer_analyzer_ki" target="_blank">github.com/werder11/fbeta_angebotsflyer_analyzer_ki</a></div>
-    <div class="card"><h3>Architektur-Doku</h3><a href="https://github.com/werder11/fbeta_angebotsflyer_analyzer_ki/tree/dev/docs" target="_blank">docs/ – Vision, C4, ADRs, Prüfkatalog, Risiken</a></div>
-  </div>
-<pre class="json" style="margin-top:.8em;font-size:.55em">$ uv run flyercheck run data/samples/Designer.pdf --mode replay
-✔ 9 offers · 7 fail · 2 needs_review · 1 not_evaluable · 26 pass   (replay, 0.6s)
-$ uv run flyercheck eval out/&lt;run&gt;/findings.json data/golden/designer.json
-overall   TP 9  FP 0  FN 0   precision 1.00   recall 1.00</pre>
+<pre class="json" style="margin-top:.8em;font-size:.48em"><span class="m">$</span> uv run flyercheck run data/samples/Designer.pdf --mode replay
+<span class="s">✔ 9 offers · 7 fail · 2 needs_review · 10 not_evaluable · 35 pass   (replay, 0.6s)</span>
+<span class="m">$</span> uv run flyercheck run data/samples/Designer.pdf --mode replay --reference data/reference/designer_prices.csv
+<span class="s">✔ 9 offers · 8 fail · 2 needs_review · 9 not_evaluable · 43 pass</span>
+<span class="m">$</span> uv run flyercheck eval out/&lt;run&gt;/findings.json data/golden/designer.json
+<span class="s">overall   TP 9  FP 0  FN 0   precision 1.00   recall 1.00</span>
+<span class="m">$</span> uv run flyercheck mutate-eval
+<span class="s">OVERALL   41 cases · 39 detected · 95.1 % · collateral FP 0</span>
+<span class="m">$</span> uv run pytest -q
+<span class="s">187 passed</span></pre>
+  <p class="small" style="margin-top:8px">Stack: Python 3.12 · pydantic · Gemini (gemini-3.5-flash + Fallback-Kette) · Azure-OpenAI-Adapter · FastAPI · Docker · GitHub Actions · reveal.js via GitHub Pages</p>
+  <aside class="notes">Die Berichte werden bei jedem Push in der GitHub-Pages-Pipeline aus den aufgezeichneten LLM-Antworten neu erzeugt.</aside>
 </section>
 
 </div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
 <script>
-Reveal.initialize({hash:true,width:1280,height:720,margin:0.05,slideNumber:'c/t',transition:'fade',
+Reveal.initialize({hash:true,width:1280,height:720,margin:0.04,slideNumber:'c/t',transition:'fade',
   center:false,controlsTutorial:false,plugins:[RevealNotes]});
 </script>
 </body>
