@@ -1,0 +1,29 @@
+# Secrets and local state never enter the image
+.env
+.env.*
+!.env.sample
+.venv
+out
+.git
+.gitignore
+.github
+.claude
+.docs
+.idea
+.vscode
+
+# Caches
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# Not needed at runtime
+tests
+docs
+deploy
+scripts
+data/spike
+graphify-out
+*.md

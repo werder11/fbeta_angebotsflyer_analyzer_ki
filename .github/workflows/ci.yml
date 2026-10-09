@@ -1,0 +1,87 @@
+# CI with evaluation gate (ADR-0008): lint -> unit tests -> replay pipeline -> eval gate.
+# Replay only: LLM responses come from data/recordings/, so no secrets and no network calls to a model.
+name: ci
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install (locked)
+        run: uv sync --frozen
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Unit tests (offline)
+        run: uv run pytest -q
+
+      - name: Replay pipeline on the sample flyer
+        run: uv run flyercheck run data/samples/Designer.pdf --mode replay --out out
+
+      - name: Evaluation gate (golden set)
+        run: |
+          uv run python scripts/eval_gate.py out/*/findings.json data/golden/designer.json \
+            --min-recall 1.0 --min-agreement 0.9
+
+      # Mutation-based evaluation is a stub until track E2 lands (run_mutation_eval raises
+      # NotImplementedError). Report it, but do not block the build yet; drop continue-on-error
+      # once E2 is merged so the mutation recall also gates releases.
+      - name: Mutation evaluation (non-blocking until E2)
+        continue-on-error: true
+        run: uv run flyercheck mutate-eval
+
+      - name: Upload HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flyercheck-report
+          path: out/**/report.html
+          if-no-files-found: warn
+
+  # A model or prompt change requires a fresh `record` run and a reviewed eval diff (ADR-0008).
+  # Enable by uncommenting; trigger manually via "Run workflow". Needs the GEMINI_API_KEY repo secret.
+  # The refreshed recordings are uploaded as an artifact for review, never committed automatically.
+  #
+  # record:
+  #   if: github.event_name == 'workflow_dispatch'
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 20
+  #   environment: llm-record
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: astral-sh/setup-uv@v6
+  #     - run: uv sync --frozen
+  #     - name: Record live LLM responses
+  #       env:
+  #         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  #       run: uv run flyercheck run data/samples/Designer.pdf --mode record --out out
+  #     - name: Evaluation gate on the recorded run
+  #       run: uv run python scripts/eval_gate.py out/*/findings.json data/golden/designer.json
+  #     - uses: actions/upload-artifact@v4
+  #       with:
+  #         name: recordings-and-report
+  #         path: |
+  #           data/recordings/
+  #           out/**/report.html
