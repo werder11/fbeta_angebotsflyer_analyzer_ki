@@ -40,7 +40,7 @@
 - [x] Replay run exit 0; eval recall = 1.0 on R-* labels; status agreement ≥ 0.9
 ### Manual
 - [x] The report shows all 7 fails / 2 needs_review / 1 not_evaluable from the golden set
-- [x] Clicking a finding highlights the correct box
+- [ ] Clicking a finding highlights the correct box (to verify in browser)
 - [x] No secrets in git history
 
 ## Phase 3: Enhancements (later, parallel worktrees)
