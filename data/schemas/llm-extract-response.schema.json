@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "ExtractedOffer": {
+      "properties": {
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "description_lines": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Description Lines",
+          "type": "array"
+        },
+        "price_raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Price Raw"
+        },
+        "original_price_raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Original Price Raw"
+        },
+        "discount_raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Discount Raw"
+        },
+        "quantity_raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity Raw"
+        },
+        "unit_price_raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit Price Raw"
+        },
+        "deposit_raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deposit Raw"
+        },
+        "image_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Image Description"
+        },
+        "offer_box_2d": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Offer Box 2D"
+        },
+        "image_box_2d": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Image Box 2D"
+        }
+      },
+      "required": [
+        "product_name"
+      ],
+      "title": "ExtractedOffer",
+      "type": "object"
+    },
+    "ExtractedTextBlock": {
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "box_2d": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Box 2D"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "ExtractedTextBlock",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "validity_raw": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Validity Raw"
+    },
+    "validity_box_2d": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Validity Box 2D"
+    },
+    "offers": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ExtractedOffer"
+      },
+      "title": "Offers",
+      "type": "array"
+    },
+    "text_blocks": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ExtractedTextBlock"
+      },
+      "title": "Text Blocks",
+      "type": "array"
+    }
+  },
+  "title": "ExtractedPage",
+  "type": "object"
+}

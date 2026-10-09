@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "GoldenLabel": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "check_id": {
+          "title": "Check Id",
+          "type": "string"
+        },
+        "offer_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Offer Name"
+        },
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "severity": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Severity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "check_id",
+        "status"
+      ],
+      "title": "GoldenLabel",
+      "type": "object"
+    },
+    "Severity": {
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "info"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "Status": {
+      "enum": [
+        "pass",
+        "fail",
+        "needs_review",
+        "not_evaluable",
+        "error"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "document": {
+      "title": "Document",
+      "type": "string"
+    },
+    "labels": {
+      "items": {
+        "$ref": "#/$defs/GoldenLabel"
+      },
+      "title": "Labels",
+      "type": "array"
+    },
+    "expected_passes": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/GoldenLabel"
+      },
+      "title": "Expected Passes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "document",
+    "labels"
+  ],
+  "title": "GoldenSet",
+  "type": "object"
+}

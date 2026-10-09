@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Decision": {
+      "enum": [
+        "confirm",
+        "reject",
+        "escalate"
+      ],
+      "title": "Decision",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Human disposition of a finding (ADR-0006). Kept separate from model-generated conclusions.",
+  "properties": {
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "finding_id": {
+      "title": "Finding Id",
+      "type": "string"
+    },
+    "decision": {
+      "$ref": "#/$defs/Decision"
+    },
+    "reviewer": {
+      "default": "anonymous",
+      "title": "Reviewer",
+      "type": "string"
+    },
+    "reason": {
+      "default": "",
+      "title": "Reason",
+      "type": "string"
+    },
+    "decided_at": {
+      "format": "date-time",
+      "title": "Decided At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "finding_id",
+    "decision",
+    "decided_at"
+  ],
+  "title": "ReviewDecision",
+  "type": "object"
+}

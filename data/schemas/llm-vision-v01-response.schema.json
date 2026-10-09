@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V01Response",
+  "type": "object",
+  "properties": {
+    "depicted_object": {
+      "type": "string"
+    },
+    "depicted_category": {
+      "type": "string"
+    },
+    "advertised_category": {
+      "type": "string"
+    },
+    "matches": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "unclear"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "depicted_object",
+    "depicted_category",
+    "advertised_category",
+    "matches",
+    "confidence",
+    "reason"
+  ]
+}

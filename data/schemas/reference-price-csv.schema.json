@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReferencePriceCsvRow",
+  "description": "One row of a reference price CSV (data/reference/*.csv), stand-in for PIM/price-DB data. Columns in this order; decimal point '.', dates ISO 8601; empty cell = null.",
+  "type": "object",
+  "required": [
+    "sku",
+    "product_name",
+    "price"
+  ],
+  "properties": {
+    "sku": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string",
+      "pattern": "^\\d+(\\.\\d{1,2})?$"
+    },
+    "original_price": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d+(\\.\\d{1,2})?$"
+    },
+    "quantity_raw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "valid_until": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    }
+  }
+}

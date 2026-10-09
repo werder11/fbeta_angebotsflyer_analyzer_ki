@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLMRecording",
+  "description": "One recorded LLM response in data/recordings/<request_key>.json (ADR-0008). Key = sha256(purpose, prompt, schema, image hashes)[:32].",
+  "type": "object",
+  "required": [
+    "purpose",
+    "model_id",
+    "response",
+    "usage",
+    "recorded_at"
+  ],
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "enum": [
+        "extract",
+        "vision"
+      ]
+    },
+    "model_id": {
+      "type": "string",
+      "description": "Model that actually served the request"
+    },
+    "response": {
+      "type": "object",
+      "description": "Parsed JSON returned by the model"
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
