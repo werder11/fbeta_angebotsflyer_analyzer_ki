@@ -4,7 +4,7 @@ name: pages
 
 on:
   push:
-    branches: [dev, main]
+    branches: [dev]  # github-pages environment only allows the default branch (dev)
   workflow_dispatch:
 
 permissions:
