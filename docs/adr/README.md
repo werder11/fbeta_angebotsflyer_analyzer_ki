@@ -12,6 +12,7 @@
 | [0006](0006-human-in-the-loop.md) | Decision support, human approves publication | Accepted | — |
 | [0007](0007-modular-monolith-serverless.md) | Modular monolith; serverless container in prod | Accepted | — |
 | [0008](0008-evaluation-gated-replay.md) | Golden set + LLM record/replay gate every change | Accepted | depends on 0003 |
+| [0009](0009-review-ui-server-rendered.md) | Review UI server-rendered (FastAPI + Jinja2 + HTMX), self-hosted assets | Proposed | depends on 0006, 0007 |
 
 ```mermaid
 flowchart LR

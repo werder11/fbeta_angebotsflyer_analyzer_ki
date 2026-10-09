@@ -26,7 +26,7 @@ The system ingests a flyer PDF, extracts offers with their location on the page,
 | Domain | Which concepts and contracts exist? | [domain/README.md](domain/README.md) |
 | Design | How does each component work? | [design/README.md](design/README.md) |
 | Decisions | Why was it built this way? | [adr/README.md](adr/README.md) |
-| Interfaces | How do components and clients communicate? | [api/README.md](api/README.md) |
+| Interfaces | How do components and clients communicate? | [api/README.md](api/README.md) · [openapi.json](api/openapi.json) · [data schemas](../data/schemas/README.md) |
 | Operations | How is it deployed, evaluated, monitored? What are the risks? | [operations/README.md](operations/README.md) |
 | Plan | How do we build it fast, in parallel? | [plan/implementation-plan.md](plan/implementation-plan.md) |
 
@@ -42,6 +42,7 @@ The system ingests a flyer PDF, extracts offers with their location on the page,
 | [ADR-0006](adr/0006-human-in-the-loop.md) | Decision support only, no auto-publish | Accepted |
 | [ADR-0007](adr/0007-modular-monolith-serverless.md) | Modular monolith; serverless container in prod | Accepted |
 | [ADR-0008](adr/0008-evaluation-gated-replay.md) | Golden set + recorded LLM replay gate every change | Accepted |
+| [ADR-0009](adr/0009-review-ui-server-rendered.md) | Review UI server-rendered, self-hosted assets (confidentiality) | Proposed |
 
 ## Source material
 
