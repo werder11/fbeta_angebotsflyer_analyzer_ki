@@ -1,0 +1,63 @@
+# Publishes the German case-study deck (site/) to GitHub Pages, together with two freshly
+# generated demo reports. Replay mode only: no secrets, no live LLM calls.
+name: pages
+
+on:
+  push:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install (locked)
+        run: uv sync --frozen
+
+      - name: Demo report with master data (synthetic PIM stand-in)
+        run: |
+          uv run flyercheck run data/samples/Designer.pdf --mode replay --out out/mit \
+            --reference data/reference/designer_prices.csv
+          mkdir -p site/demo
+          cp "$(ls out/mit/*/report.html | head -n 1)" site/demo/report.html
+
+      - name: Demo report without master data (default run)
+        run: |
+          uv run flyercheck run data/samples/Designer.pdf --mode replay --out out/ohne
+          cp "$(ls out/ohne/*/report.html | head -n 1)" site/demo/report-ohne-stammdaten.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
