@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "depicted_object": "red tomatoes on the vine",
+  "depicted_category": "Vegetables / Tomatoes",
+  "advertised_category": "Rispentomaten",
+  "matches": "yes",
+  "confidence": 1.0,
+  "reason": "The image clearly depicts red tomatoes on the vine, which matches the advertised product 'Rispentomaten' (tomatoes on the vine)."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 3526,
+  "output_tokens": 300,
+  "thinking_tokens": 604
+ },
+ "recorded_at": "2026-10-09T09:14:00+00:00"
+}

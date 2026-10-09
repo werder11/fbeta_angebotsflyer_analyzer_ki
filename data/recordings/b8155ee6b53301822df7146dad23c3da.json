@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.1-flash-lite",
+ "response": {
+  "depicted_object": "eggplant",
+  "depicted_category": "vegetable",
+  "advertised_category": "chocolate",
+  "matches": "no",
+  "confidence": 1,
+  "reason": "The image depicts an eggplant, which is a vegetable, while the advertised product is chocolate."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 3506,
+  "output_tokens": 283,
+  "thinking_tokens": 0
+ },
+ "recorded_at": "2026-10-09T09:15:55+00:00"
+}

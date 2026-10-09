@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "depicted_object": "tomatoes on the vine",
+  "depicted_category": "vegetables",
+  "advertised_category": "Rispentomaten",
+  "matches": "yes",
+  "confidence": 1.0,
+  "reason": "The image clearly depicts fresh red tomatoes attached to a green vine, which is the exact definition of 'Rispentomaten' (tomatoes on the vine)."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 2339,
+  "output_tokens": 220,
+  "thinking_tokens": 438
+ },
+ "recorded_at": "2026-10-09T09:15:30+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "depicted_object": "a raw salmon fillet on a plate with a lemon slice and dill",
+  "depicted_category": "fresh fish / salmon fillet",
+  "advertised_category": "Nordmeer Lachsfilet",
+  "matches": "yes",
+  "confidence": 0.95,
+  "reason": "The image clearly depicts a fresh salmon fillet, which matches the advertised product 'Nordmeer Lachsfilet' (North Sea salmon fillet)."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 3537,
+  "output_tokens": 330,
+  "thinking_tokens": 619
+ },
+ "recorded_at": "2026-10-09T09:15:38+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.1-flash-lite",
+ "response": {
+  "depicted_object": "A plastic crate containing multiple clear plastic bottles filled with a transparent liquid, plus one individual bottle of the same type standing next to it.",
+  "depicted_category": "bottled water",
+  "advertised_category": "mineral water",
+  "matches": "yes",
+  "confidence": 1,
+  "reason": "The image shows a crate of bottled water and an individual bottle, which directly corresponds to the advertised product 'Quellklar Mineralwasser'."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 3596,
+  "output_tokens": 301,
+  "thinking_tokens": 0
+ },
+ "recorded_at": "2026-10-09T09:14:17+00:00"
+}

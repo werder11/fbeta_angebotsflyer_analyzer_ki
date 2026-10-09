@@ -15,3 +15,34 @@ Structured around the three questions in the brief.
 | 9:00 | 7. Roadmap | PoC → shadow pilot (baseline) → assisted production → PIM integration | [vision](../vision/README.md#roadmap) |
 
 **Talking points:** "No findings ≠ defect-free" · "Every finding has evidence you can verify in 5 seconds" · "How the work was built: contract first, 5 agents in parallel worktrees"
+
+## PoC results (2026-10-09, `v0.1-poc`)
+
+![FlyerCheck report](report-screenshot.png)
+
+```
+$ flyercheck run data/samples/Designer.pdf --mode replay
+✔ 9 offers · 7 fail · 2 needs_review · 1 not_evaluable · 26 pass   (replay, 0.6s)
+
+$ flyercheck eval out/<run>/findings.json data/golden/designer.json
+category                 TP   FP   FN precision  recall
+E01_product_image         1    0    0      1.00    1.00
+E03_arithmetic            3    0    0      1.00    1.00
+E06_temporal              1    0    0      1.00    1.00
+E08_completeness          3    0    0      1.00    1.00
+E09_cross_reference       1    0    0      1.00    1.00
+overall                   9    0    0      1.00    1.00
+status_agreement 1.00 · expected_pass_agreement 1.00
+```
+
+| Live run (record) | Value |
+|---|---|
+| Extraction | `gemini-3.5-flash`, ~16–34 s (429/503 retries), 9/9 offers exact |
+| V-01 (9 crops, 3 parallel) | ~35 s; fallback to `gemini-3.1-flash-lite` on 429 shows the fallback chain working |
+| Tokens (10 calls) | 29.7k in · 5.1k out · 4.7k thinking → fractions of a cent per page |
+| Replay | 0.6 s, offline, deterministic |
+| Tests | 116 passing, offline |
+
+**Caveat to state:** one synthetic flyer = a functional test, not an accuracy claim (see risks R10). Next: mutation-based golden set (E2).
+
+**How it was built:** Phase 0 contract (~7 min) → 5 agents in parallel git worktrees (≈1.5–4 min each, 0 merge conflicts) → integrate + record + eval.

@@ -1,0 +1,366 @@
+{
+ "purpose": "extract",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "validity_raw": "Gültig von Mo. 07.10. bis Sa. 12.10.",
+  "validity_box_2d": [
+   151,
+   0,
+   181,
+   563
+  ],
+  "offers": [
+   {
+    "product_name": "Sonnenäpfel",
+    "description_lines": [
+     "Sorte: Rubinette",
+     "Klasse I",
+     "1 kg"
+    ],
+    "price_raw": "1,69",
+    "original_price_raw": null,
+    "discount_raw": null,
+    "quantity_raw": "1 kg",
+    "unit_price_raw": null,
+    "deposit_raw": null,
+    "image_description": "Apples, some whole, one cut in half, on a light background",
+    "offer_box_2d": [
+     181,
+     0,
+     376,
+     338
+    ],
+    "image_box_2d": [
+     181,
+     0,
+     318,
+     332
+    ]
+   },
+   {
+    "product_name": "Rispentomaten",
+    "description_lines": [
+     "aus den Niederlanden",
+     "Klasse I",
+     "1 kg"
+    ],
+    "price_raw": "1,49",
+    "original_price_raw": "1,99",
+    "discount_raw": "-25%",
+    "quantity_raw": "1 kg",
+    "unit_price_raw": null,
+    "deposit_raw": null,
+    "image_description": "Vine tomatoes on a light background",
+    "offer_box_2d": [
+     181,
+     338,
+     376,
+     664
+    ],
+    "image_box_2d": [
+     181,
+     348,
+     304,
+     654
+    ]
+   },
+   {
+    "product_name": "Nordmeer Lachsfilet",
+    "description_lines": [
+     "Frisch, mit Haut",
+     "Aus nachhaltiger",
+     "Aquakultur",
+     "100 g"
+    ],
+    "price_raw": "2,99",
+    "original_price_raw": null,
+    "discount_raw": null,
+    "quantity_raw": "100 g",
+    "unit_price_raw": null,
+    "deposit_raw": null,
+    "image_description": "Fresh salmon fillet with a lemon slice on a light background",
+    "offer_box_2d": [
+     181,
+     664,
+     376,
+     1000
+    ],
+    "image_box_2d": [
+     181,
+     671,
+     318,
+     1000
+    ]
+   },
+   {
+    "product_name": "Bergtal Fruchtjoghurt",
+    "description_lines": [
+     "Versch. Sorten",
+     "150 g Becher",
+     "(1 kg = 2,60)"
+    ],
+    "price_raw": "0,39",
+    "original_price_raw": "0,59",
+    "discount_raw": "-33%",
+    "quantity_raw": "150 g Becher",
+    "unit_price_raw": "1 kg = 2,60",
+    "deposit_raw": null,
+    "image_description": "Two cups of Bergtal yogurt, strawberry and vanilla flavors",
+    "offer_box_2d": [
+     376,
+     0,
+     581,
+     366
+    ],
+    "image_box_2d": [
+     384,
+     25,
+     505,
+     359
+    ]
+   },
+   {
+    "product_name": "Goldkrone Röstkaffee",
+    "description_lines": [
+     "100 % Arabica",
+     "500 g Packung",
+     "(1 kg = 13,98)"
+    ],
+    "price_raw": "6,99",
+    "original_price_raw": null,
+    "discount_raw": null,
+    "quantity_raw": "500 g Packung",
+    "unit_price_raw": "1 kg = 13,98",
+    "deposit_raw": null,
+    "image_description": "A package of Goldkrone Röstkaffee Klassik coffee beans",
+    "offer_box_2d": [
+     376,
+     366,
+     581,
+     664
+    ],
+    "image_box_2d": [
+     377,
+     441,
+     529,
+     631
+    ]
+   },
+   {
+    "product_name": "Steinofen Genuss Pizza Salami",
+    "description_lines": [
+     "Tiefgefroren",
+     "320 g Packung",
+     "(1 kg = 5,59)"
+    ],
+    "price_raw": "1,69",
+    "original_price_raw": "2,89",
+    "discount_raw": "-42%",
+    "quantity_raw": "320 g Packung",
+    "unit_price_raw": "1 kg = 5,59",
+    "deposit_raw": null,
+    "image_description": "A box of Steinofen Genuss Salami Pizza",
+    "offer_box_2d": [
+     376,
+     664,
+     581,
+     1000
+    ],
+    "image_box_2d": [
+     381,
+     701,
+     515,
+     966
+    ]
+   },
+   {
+    "product_name": "Quellklar Mineralwasser",
+    "description_lines": [
+     "Classic",
+     "6 x 1,5 l PET-Flaschen",
+     "(1 l = 0,44)",
+     "zzgl. 1,50 Pfand"
+    ],
+    "price_raw": "3,99",
+    "original_price_raw": null,
+    "discount_raw": null,
+    "quantity_raw": "6 x 1,5 l PET-Flaschen",
+    "unit_price_raw": "1 l = 0,44",
+    "deposit_raw": "zzgl. 1,50 Pfand",
+    "image_description": "A crate of Quellklar mineral water bottles and one single bottle next to it",
+    "offer_box_2d": [
+     581,
+     0,
+     768,
+     344
+    ],
+    "image_box_2d": [
+     578,
+     28,
+     721,
+     329
+    ]
+   },
+   {
+    "product_name": "Schola Schokolade",
+    "description_lines": [
+     "Alpenvollmilch",
+     "100 g Tafel"
+    ],
+    "price_raw": "0,99",
+    "original_price_raw": "1,29",
+    "discount_raw": "-23%",
+    "quantity_raw": "100 g Tafel",
+    "unit_price_raw": null,
+    "deposit_raw": null,
+    "image_description": "An eggplant with a purple banner saying Schola",
+    "offer_box_2d": [
+     581,
+     344,
+     768,
+     664
+    ],
+    "image_box_2d": [
+     590,
+     371,
+     713,
+     649
+    ]
+   },
+   {
+    "product_name": "Softina Toilettenpapier Samtweich",
+    "description_lines": [
+     "8 x 150 Blatt",
+     "Packung"
+    ],
+    "price_raw": "2,79",
+    "original_price_raw": null,
+    "discount_raw": null,
+    "quantity_raw": "8 x 150 Blatt Packung",
+    "unit_price_raw": null,
+    "deposit_raw": null,
+    "image_description": "A pack of Softina Samtweich toilet paper",
+    "offer_box_2d": [
+     581,
+     664,
+     768,
+     1000
+    ],
+    "image_box_2d": [
+     591,
+     686,
+     704,
+     984
+    ]
+   }
+  ],
+  "text_blocks": [
+   {
+    "text": "Frischfeld Markt FRISCH. NAH. FÜR DICH.",
+    "box_2d": [
+     7,
+     16,
+     151,
+     376
+    ]
+   },
+   {
+    "text": "Genuss in jeder Jahreszeit.",
+    "box_2d": [
+     25,
+     428,
+     128,
+     687
+    ]
+   },
+   {
+    "text": "Unsere Angebote für dich!",
+    "box_2d": [
+     0,
+     761,
+     148,
+     1000
+    ]
+   },
+   {
+    "text": "Regional. Vielfältig. Einfach gut.",
+    "box_2d": [
+     768,
+     0,
+     908,
+     289
+    ]
+   },
+   {
+    "text": "Rezeptidee: Cremige Kürbissuppe mit gerösteten Kernen. Rezept auf Seite 6.",
+    "box_2d": [
+     821,
+     518,
+     893,
+     684
+    ]
+   },
+   {
+    "text": "Noch mehr Inspiration? Rezepte, Tipps und aktuelle Angebote auf frischfeld-markt.de",
+    "box_2d": [
+     771,
+     696,
+     904,
+     988
+    ]
+   },
+   {
+    "text": "Mehr Regionalität",
+    "box_2d": [
+     924,
+     21,
+     946,
+     191
+    ]
+   },
+   {
+    "text": "Bewusst einkaufen",
+    "box_2d": [
+     924,
+     233,
+     946,
+     425
+    ]
+   },
+   {
+    "text": "Stark für die Region",
+    "box_2d": [
+     924,
+     465,
+     946,
+     653
+    ]
+   },
+   {
+    "text": "frischfeld-markt.de",
+    "box_2d": [
+     928,
+     724,
+     941,
+     874
+    ]
+   },
+   {
+    "text": "Wir sehen uns im Markt!",
+    "box_2d": [
+     950,
+     669,
+     981,
+     952
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 1235,
+  "output_tokens": 2775,
+  "thinking_tokens": 2893
+ },
+ "recorded_at": "2026-10-09T09:13:45+00:00"
+}

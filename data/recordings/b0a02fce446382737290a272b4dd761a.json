@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.1-flash-lite",
+ "response": {
+  "depicted_object": "A plastic crate containing multiple clear plastic bottles filled with a transparent liquid, and one individual bottle of the same type standing next to it.",
+  "depicted_category": "Bottled water",
+  "advertised_category": "Mineral water",
+  "matches": "yes",
+  "confidence": 1,
+  "reason": "The image shows bottled water in both a crate and as a single unit, which directly corresponds to the advertised product category of mineral water."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 3524,
+  "output_tokens": 328,
+  "thinking_tokens": 312
+ },
+ "recorded_at": "2026-10-09T09:15:47+00:00"
+}

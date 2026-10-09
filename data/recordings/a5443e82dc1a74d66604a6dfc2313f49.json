@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.1-flash-lite",
+ "response": {
+  "depicted_object": "A frozen pizza with salami toppings",
+  "depicted_category": "frozen pizza",
+  "advertised_category": "frozen pizza",
+  "matches": "yes",
+  "confidence": 1,
+  "reason": "The image shows a box of frozen pizza with salami, which directly matches the advertised product category."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 2389,
+  "output_tokens": 178,
+  "thinking_tokens": 0
+ },
+ "recorded_at": "2026-10-09T09:14:09+00:00"
+}

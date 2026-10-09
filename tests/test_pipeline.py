@@ -36,7 +36,7 @@ def test_pipeline_from_context_wires_stages(monkeypatch, tmp_path):
     res = pipeline.run("ignored.pdf", out=str(tmp_path), from_context="tests/fixtures/designer_context.json",
                        year=2026)
     assert [f.check_id for f in res.findings] == ["R-01", "V-01"]
-    assert res.mode == "context" and res.versions["model"] == "fake-model"
+    assert res.mode == "context" and res.versions["extract_model"] == "n/a (context)"
     assert res.context.document.campaign_year_source == "cli"
     assert calls["out_dir"].endswith(res.run_id)
     assert json.loads((Path(calls["out_dir"]) / "findings.json").read_text())["run_id"] == res.run_id

@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "depicted_object": "Two cups of yogurt, one strawberry flavored and one vanilla flavored",
+  "depicted_category": "Yogurt",
+  "advertised_category": "Bergtal Fruchtjoghurt",
+  "matches": "yes",
+  "confidence": 1.0,
+  "reason": "The image depicts Bergtal brand yogurt cups in strawberry (Erdbeere) and vanilla (Vanille) flavors, which perfectly matches the advertised 'Bergtal Fruchtjoghurt' (various sorts)."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 4691,
+  "output_tokens": 426,
+  "thinking_tokens": 648
+ },
+ "recorded_at": "2026-10-09T09:15:40+00:00"
+}

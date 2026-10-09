@@ -33,6 +33,7 @@ def run(
         staging = Path(out) / f"_staging-{started:%Y%m%dT%H%M%S}"
         doc, pages = ingest.load(pdf, str(staging), year)
         ctx = extract.extract_document(doc, pages, llm)
+    extract_model = getattr(llm, "model_id", "n/a") if not from_context else "n/a (context)"
 
     with ThreadPoolExecutor(max_workers=2) as ex:  # deterministic ∥ AI-assisted
         f_rules = ex.submit(rules.run_rules, ctx)
@@ -54,7 +55,11 @@ def run(
         context=ctx,
         findings=findings,
         versions={
-            "model": getattr(llm, "model_id", "n/a"),
+            "model": extract_model,
+            "extract_model": extract_model,
+            "vision_model": ", ".join(
+                sorted({f.model_version for f in findings if f.check_id.startswith("V-") and f.model_version})
+            ),
             "extract_prompt": extract.PROMPT_VERSION,
             "rules": RULES_VERSION,
         },

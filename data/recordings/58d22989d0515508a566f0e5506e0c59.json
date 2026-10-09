@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.1-flash-lite",
+ "response": {
+  "depicted_object": "A package of toilet paper rolls",
+  "depicted_category": "Toilet paper",
+  "advertised_category": "Toilet paper",
+  "matches": "yes",
+  "confidence": 1,
+  "reason": "The image clearly shows a retail package of toilet paper, which matches the advertised product category."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 2398,
+  "output_tokens": 196,
+  "thinking_tokens": 0
+ },
+ "recorded_at": "2026-10-09T09:14:19+00:00"
+}

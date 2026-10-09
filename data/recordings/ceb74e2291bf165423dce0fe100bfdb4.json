@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.1-flash-lite",
+ "response": {
+  "depicted_object": "two cups of yogurt, one with strawberry imagery and one with vanilla flower imagery",
+  "depicted_category": "yogurt",
+  "advertised_category": "fruit yogurt",
+  "matches": "yes",
+  "confidence": 1,
+  "reason": "The image shows two cups of yogurt, which directly corresponds to the advertised product category of fruit yogurt."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 3554,
+  "output_tokens": 297,
+  "thinking_tokens": 382
+ },
+ "recorded_at": "2026-10-09T09:14:08+00:00"
+}

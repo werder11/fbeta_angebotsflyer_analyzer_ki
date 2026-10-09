@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "depicted_object": "several red and yellow apples, with one cut in half showing the core and seeds, accompanied by green leaves",
+  "depicted_category": "apples",
+  "advertised_category": "Sonnenäpfel (Sorte: Rubinette, Klasse I)",
+  "matches": "yes",
+  "confidence": 1.0,
+  "reason": "The image clearly depicts fresh apples, which matches the advertised product 'Sonnenäpfel' (a variety of apple)."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 1178,
+  "output_tokens": 118,
+  "thinking_tokens": 283
+ },
+ "recorded_at": "2026-10-09T09:15:29+00:00"
+}

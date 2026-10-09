@@ -1,0 +1,19 @@
+{
+ "purpose": "vision",
+ "model_id": "gemini-3.5-flash",
+ "response": {
+  "depicted_object": "several red and yellow apples, with one cut in half",
+  "depicted_category": "apples",
+  "advertised_category": "Sonnenäpfel (apples)",
+  "matches": "yes",
+  "confidence": 1.0,
+  "reason": "The image clearly depicts apples, which matches the advertised product 'Sonnenäpfel' (apples)."
+ },
+ "usage": {
+  "calls": 1,
+  "input_tokens": 1156,
+  "output_tokens": 97,
+  "thinking_tokens": 222
+ },
+ "recorded_at": "2026-10-09T09:13:58+00:00"
+}
